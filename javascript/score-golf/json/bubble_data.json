@@ -2281,10 +2281,10 @@
     "region": "Northern Alberta",
     "p_id": 13,
     "access": "Public",
-    "par": "72",
-    "yards": 6674.0,
-    "slope": 70.0,
-    "rating": 99.0,
+    "par": "36",
+    "yards": 3360.0,
+    "slope": 123.0,
+    "rating": 34.5,
     "stars": "Not Rated"
 },{
     "course": "Cleardale Golf and Country Club",
@@ -23313,10 +23313,10 @@
     "region": "Southern Saskatchewan",
     "p_id": 2,
     "access": null,
-    "par": "71",
-    "yards": 6418.0,
-    "slope": 121.0,
-    "rating": 69.4,
+    "par": "72",
+    "yards": 6635.0,
+    "slope": 128.0,
+    "rating": 71.2,
     "stars": "4"
 },{
     "course": "Coronach Golf Club",
