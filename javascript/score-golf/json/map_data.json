@@ -92,8 +92,8 @@
     "id": "CA-NT",
     "province": "Northwest Territories",
     "prov_short": "NT",
-    "slope": 0,
-    "rating": 0,
+    "slope": NaN,
+    "rating": NaN,
     "course_count": 1,
     "hole_count": 9.0,
     "yards": 0.0,
@@ -178,4 +178,19 @@
     "hls_p_person": 0.0006399317406143345,
     "crs_p_km2": 6.323897375793385e-06,
     "hls_p_km2": 5.6915076382140474e-05
+},{
+    "id": "CA-NU",
+    "province": "Nunavut",
+    "prov_short": "NU",
+    "slope": 0.0,
+    "rating": 0.0,
+    "course_count": 0,
+    "hole_count": 0.0,
+    "yards": 0.0,
+    "population": 39407,
+    "area": 1936113,
+    "crs_p_person": 0.0,
+    "hls_p_person": 0.0,
+    "crs_p_km2": 0.0,
+    "hls_p_km2": 0.0
 }]
