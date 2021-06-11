@@ -180,10 +180,10 @@
     "region": "Calgary",
     "p_id": 13,
     "access": null,
-    "par": "71",
-    "yards": 6344.0,
-    "slope": 121.0,
-    "rating": 170.0,
+    "par": "30",
+    "yards": 1582.0,
+    "slope": null,
+    "rating": null,
     "stars": "4"
 },{
     "course": "LivingStone Golf Course",
@@ -15429,7 +15429,7 @@
     "par": "71",
     "yards": 6215.0,
     "slope": 118.0,
-    "rating": 690.0,
+    "rating": 69.0,
     "stars": "4"
 },{
     "course": "Blackhorse Golf and Country Club",
@@ -18795,7 +18795,7 @@
     "par": "72",
     "yards": 7012.0,
     "slope": 136.0,
-    "rating": 137.0,
+    "rating": 73.3,
     "stars": "Not Rated"
 },{
     "course": "Club de Golf les Patriotes",
@@ -22226,7 +22226,7 @@
     "access": null,
     "par": "72",
     "yards": 6442.0,
-    "slope": 1221.0,
+    "slope": 121.0,
     "rating": 70.7,
     "stars": "Not Rated"
 },{
