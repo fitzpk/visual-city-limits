@@ -12,7 +12,8 @@
     "crs_p_person": 13.66,
     "hls_p_person": 135.9,
     "crs_p_km2": 0.27,
-    "hls_p_km2": 2.71
+    "hls_p_km2": 2.71,
+    "access": "5.7% Private | 94.3% Public"
 },{
     "id": "CA-MB",
     "province": "Manitoba",
@@ -27,7 +28,8 @@
     "crs_p_person": 9.34,
     "hls_p_person": 111.88,
     "crs_p_km2": 0.23,
-    "hls_p_km2": 2.79
+    "hls_p_km2": 2.79,
+    "access": "12.2% Private | 87.8% Public"
 },{
     "id": "CA-NL",
     "province": "Newfoundland",
@@ -42,7 +44,8 @@
     "crs_p_person": 3.84,
     "hls_p_person": 29.4,
     "crs_p_km2": 0.05,
-    "hls_p_km2": 0.41
+    "hls_p_km2": 0.41,
+    "access": "16.7% Private | 83.3% Public"
 },{
     "id": "CA-BC",
     "province": "British Columbia",
@@ -57,7 +60,8 @@
     "crs_p_person": 5.74,
     "hls_p_person": 77.43,
     "crs_p_km2": 0.32,
-    "hls_p_km2": 4.31
+    "hls_p_km2": 4.31,
+    "access": "3.8% Private | 96.2% Public"
 },{
     "id": "CA-NB",
     "province": "New Brunswick",
@@ -72,7 +76,8 @@
     "crs_p_person": 6.65,
     "hls_p_person": 55.37,
     "crs_p_km2": 0.73,
-    "hls_p_km2": 6.06
+    "hls_p_km2": 6.06,
+    "access": "10.0% Private | 90.0% Public"
 },{
     "id": "CA-AB",
     "province": "Alberta",
@@ -87,7 +92,8 @@
     "crs_p_person": 6.74,
     "hls_p_person": 75.67,
     "crs_p_km2": 0.47,
-    "hls_p_km2": 5.23
+    "hls_p_km2": 5.23,
+    "access": "13.7% Private | 86.3% Public"
 },{
     "id": "CA-QC",
     "province": "Quebec",
@@ -102,7 +108,8 @@
     "crs_p_person": 4.13,
     "hls_p_person": 35.05,
     "crs_p_km2": 0.26,
-    "hls_p_km2": 2.2
+    "hls_p_km2": 2.2,
+    "access": "34.6% Private | 65.4% Public"
 },{
     "id": "CA-NS",
     "province": "Nova Scotia",
@@ -117,7 +124,8 @@
     "crs_p_person": 7.04,
     "hls_p_person": 62.48,
     "crs_p_km2": 1.29,
-    "hls_p_km2": 11.47
+    "hls_p_km2": 11.47,
+    "access": "0.0% Private | 100.0% Public"
 },{
     "id": "CA-ON",
     "province": "Ontario",
@@ -132,7 +140,8 @@
     "crs_p_person": 5.34,
     "hls_p_person": 61.86,
     "crs_p_km2": 0.86,
-    "hls_p_km2": 9.95
+    "hls_p_km2": 9.95,
+    "access": "23.8% Private | 76.2% Public"
 },{
     "id": "CA-YT",
     "province": "Yukon Territories",
@@ -147,7 +156,8 @@
     "crs_p_person": 7.11,
     "hls_p_person": 63.99,
     "crs_p_km2": 0.01,
-    "hls_p_km2": 0.06
+    "hls_p_km2": 0.06,
+    "access": "0.0% Private | 100.0% Public"
 },{
     "id": "CA-PE",
     "province": "Prince Edward Island",
@@ -162,7 +172,8 @@
     "crs_p_person": 15.64,
     "hls_p_person": 168.94,
     "crs_p_km2": 4.42,
-    "hls_p_km2": 47.7
+    "hls_p_km2": 47.7,
+    "access": "0.0% Private | 100.0% Public"
 },{
     "id": "CA-NT",
     "province": "Northwest Territories",
@@ -177,7 +188,8 @@
     "crs_p_person": 2.22,
     "hls_p_person": 19.94,
     "crs_p_km2": 0.0,
-    "hls_p_km2": 0.01
+    "hls_p_km2": 0.01,
+    "access": "0.0% Private | 100.0% Public"
 },{
     "id": "CA-NU",
     "province": "Nunavut",
@@ -192,5 +204,6 @@
     "crs_p_person": null,
     "hls_p_person": null,
     "crs_p_km2": null,
-    "hls_p_km2": null
+    "hls_p_km2": null,
+    "access": "No Courses"
 }]
