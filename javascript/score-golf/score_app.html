@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Golf Courses of Canada</title>
+</head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    background-color: #262626;
+  }
+
+  #title {
+    width: 100%;
+    text-align: left;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+    color: rgba(236,236,236,1);
+    font-family:'Oswald', sans-serif;
+    text-transform: uppercase;
+  }
+
+  #chartdiv{
+    position: relative;
+    margin: 0 auto;
+    height: 50vh;
+    flex: 1 1 auto;
+    width: 50vw;
+  }
+  #chartdiv2{
+    position: relative;
+    margin: 0 auto;
+    height: 30vh;
+    flex: 1 1 auto;
+    width: 50vw;
+  }
+  #chartdiv3{
+    position: relative;
+    margin: 0 auto;
+    height: 40vh;
+    min-height: 550px;
+    flex: 1 1 auto;
+    width: 45vw;
+  }
+  #chart3_container {
+    box-shadow: 0px 3px 5px 0.5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 3px 5px 0.5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 5px 0.5px rgba(0,0,0,0.75);
+    background-color:#3e3d48;
+    border-radius:6px;
+  }
+
+  /* ---------------------- */
+  .flexouter {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+  .flexcontainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    position:relative;
+    /*
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);*/
+  }
+  .chart {
+    flex: 1 1 300px;
+    font-family:'Oswald', sans-serif;
+  }
+
+  .active{
+    background-color: rgba(142,151,157,0.4);
+    border: 0.8px solid #ffffff;
+    webkit-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.12)!important;
+    -moz-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.12)!important;
+    box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.12)!important;
+  }
+  .activeClear {
+    border: 0px solid #ffffff;
+  }
+  hr {
+    width: 50%;
+  }
+
+
+
+
+
+  /* ~~~~~~~  COLLAPSIBLE CSS SETTINGS ~~~~~~~~ */
+  .collapsible, #flex-collapse{
+    margin: 0 auto;
+    font-family:'Oswald', sans-serif;
+  		background-color: #3e3d48;
+  		color: white;
+  		cursor: pointer;
+  		padding: 10px;
+  		width: 95%;
+  		border: none;
+  		text-align: left;
+  		outline: none;
+  		font-size: 15px;
+  		font-weight: bold;
+  		border-radius: 6px;
+  		margin-top: 10px;
+  }
+  #flex-collapse ul {
+     font-weight: normal;
+  }
+
+  .collapsible:after {
+  		color: white;
+  		content: '\002B';
+  		float: right;
+  }
+
+  .active2:after {
+  		color: white;
+  		content: "\2212";
+  }
+
+  .content {
+  		width: auto;
+  		padding: 0 18px;
+  		max-height: 0;
+  		overflow: hidden;
+  		transition: 0.2s ease-out;
+  		box-sizing: border-box;
+      /*border: 1px solid #6f1c46;
+      background-color: #f0f0f0;*/
+      border-radius: 6px;
+      margin-top:-20px;
+  		/*box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;*/
+  }
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+  /* ~~~~~~~  FIXED SUBJECT FILTER DROPDOWN ~~~~~~~~ */
+  #metric_txt {
+    color: rgba(236,236,236,1);
+    font-family:'Oswald',sans-serif;
+    margin-left: 15px;
+  }
+  #metric_txt:after {
+    content: ' \2193';
+  }
+  .metric_filter {
+    z-index: 3000;
+    webkit-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.12)!important;
+    -moz-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.12)!important;
+    box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.12)!important;
+    position: absolute;
+    margin: 15px;
+    top:30px;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 4px;
+    text-align:center;
+  }
+
+  .dropbtn {
+    position:relative;
+    height: 50px;
+    background-color: rgba(159,211,199,1);
+    color: #262626;
+    font-size: 12px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    cursor: pointer;
+    width:100%;
+    min-width: 80px;
+    max-width: 80px;
+    border-radius: 4px;
+    box-shadow: 0px 3px 5px 0.5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 3px 5px 0.5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 5px 0.5px rgba(0,0,0,0.75);
+  }
+
+  .dropdown {
+    position: relative;
+    width:100%;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(159,211,199,0.7);
+    min-width: 100%;
+    max-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: -1;
+    font-size: 10px;
+    margin-top:5px;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+    border:1px solid black;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1
+  }
+
+  .metric_filter:hover .dropdown-content {
+    display: block;
+  }
+
+  /*.dropdown:hover .dropbtn {
+    background-color: #007096;
+  }*/
+
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  #table_outer {
+    width: 95vw;
+    background-color:#f7f7f7;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+    padding:10px;
+  }
+
+  table { text-align: center; border:0px solid black;}
+  th { font-size: 13px; }
+  td { font-size: 11px; }
+
+  #table1_filter > label > input[type=search] {
+    margin-right: 10px;
+    margin-bottom: 5px;
+    outline: none;
+    height:35px;
+    width: 250px;
+    border: 0px solid black;
+    border-bottom: 0.5px solid #B04E4D;
+    background-color: rgba(255,255,255,0);
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+  }
+
+    #table1_filter > label > input[type=search]:focus, #table1_filter > label > input[type=search]:hover, #table1_filter > label > input[type=search]:active {
+      border-bottom: 0.5px solid #B04E4D;
+      background-color: rgba(255,255,255,0.8);
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .checked {
+      color: #f58f0d;
+    }
+
+
+    /* ~~~~~~~  SMALL SCREEN SETTINGS ~~~~~~~~ */
+    @media only screen and (max-width: 760px) {
+      .flexouter {
+        flex-wrap: wrap;
+        width: 95vw;
+      }
+      #chartdiv, #chartdiv2, #chartdiv3 {
+        width: 90vw;
+      }
+      #table_outer {
+        width:90vw;
+        margin-left:-10px;
+      }
+
+    }
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+</style>
+
+<body>
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+<script src="https://www.amcharts.com/lib/4/maps.js"></script>
+<script src="https://www.amcharts.com/lib/4/geodata/canadaLow.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery.appendgrid@2/dist/AppendGrid.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<script>
+  // Highlights selected ranking button
+  function highlightVal(elem) {
+    var x = document.getElementsByClassName("valuebox");
+    // Reset style of all option boxes
+    for (var i = 0; i < x.length; i++) {
+       x.item(i).className = 'valuebox';
+    }
+    // Apply active style to clicked element
+    elem.className += ' active';
+  }
+  function highlightSub(elem) {
+    var x = document.getElementsByClassName("subDrop");
+    // Reset style of all option boxes
+    for (var i = 0; i < x.length; i++) {
+       x.item(i).className = 'subDrop';
+    }
+    // Apply active style to clicked element
+    elem.className += ' activeClear';
+    document.getElementById('cont').style.display = "none";
+  }
+  function collapsible(elem){
+   var collaps = document.getElementsByClassName("content");
+   selectedcollap = elem.id;
+   elem.classList.toggle("active2");
+   if (collaps[selectedcollap].style.maxHeight) {
+     collaps[selectedcollap].style.maxHeight = null;
+   }
+   else {
+     collaps[selectedcollap].style.maxHeight = collaps[selectedcollap].scrollHeight + "px";
+   }
+  }
+
+  // Changes text shown in the subject filter
+  function changeText(elem){
+    var t = elem.id;
+    //var lower_t = t.toLowerCase();
+    document.getElementById("fixedBTN").innerHTML = t;
+    //window.alert(elem.title);
+  }
+
+  function roundCorners() {
+    var x = document.getElementsByClassName("subDrop").children[1];
+    //console.log(x);
+  }
+
+  function displayDrops(elem) {
+    display = document.getElementById('cont').style.display;
+    document.getElementById('cont').style.display = "block";
+    //elem.click();
+  }
+
+  function hideClick(elem) {
+    display = document.getElementById('cont').style.display;
+    document.getElementById('cont').style.display = "block";
+    if (display == "block"){
+      document.getElementById('cont').style.display = "none";
+    }
+  }
+
+  //************************************************
+</script>
+
+<div id="title">
+  <span style="">Golf Courses of Canada</span>
+</div>
+
+<div class="flexouter">
+  <div class="flexcontainer" style="padding:10px;">
+    <span id="metric_txt">Metric</span>
+    <div class="metric_filter">
+      <div class="dropdown">
+        <!--<img id="filterIMG" src="https://dl.dropbox.com/s/5qsl5ftna77ug51/filter_transp_white.png?dl=0" width="28" height="28">-->
+        <button id="fixedBTN" class="dropbtn" onmouseover="displayDrops(this);" onclick="hideClick();">Courses per Capita</button>
+        <div class="dropdown-content" id="cont">
+          <a href="javascript:void(0)"  class="subDrop" id="Rating" title="rating" onclick="highlightSub(this);changeText(this);selectValue(this.title);">Rating</a>
+          <a href="javascript:void(0)"  class="subDrop" id="Slope" title="slope" onclick="highlightSub(this);changeText(this);selectValue(this.title);">Slope</a>
+          <a href="javascript:void(0)"  class="subDrop" id="Courses" title="course_count" onclick="highlightSub(this);changeText(this);selectValue(this.title);">Courses</a>
+          <a href="javascript:void(0)"  class="subDrop" id="Holes" title="hole_count" onclick="highlightSub(this);changeText(this);selectValue(this.title);">Holes</a>
+          <a href="javascript:void(0)"  class="subDrop" id="Courses per Capita" title="crs_p_person" onclick="highlightSub(this);changeText(this);selectValue(this.title);">Courses per Capita</a>
+          <a href="javascript:void(0)"  class="subDrop" id="Holes per Capita" title="hls_p_person" onclick="highlightSub(this);changeText(this);selectValue(this.title);">Holes per Capita</a>
+          <a href="javascript:void(0)"  class="subDrop" id="Courses per 1000 km2" title="crs_p_km2" onclick="highlightSub(this);changeText(this);selectValue(this.title);">Courses per 1000 km2</a>
+          <a href="javascript:void(0)"  class="subDrop" id="Holes per 1000 km2" title="hls_p_km2" onclick="highlightSub(this);changeText(this);selectValue(this.title);">Holes per 1000 km2</a>
+        </div>
+      </div>
+    </div>
+    <div id="chartdiv" class="chart" style=""></div>
+    <div id="chartdiv2" class="chart" style=""></div>
+  </div>
+
+  <div class="flexcontainer" id="chart3_container" style="">
+    <div id="chartdiv3" class="chart" style=""></div>
+  </div>
+</div>
+
+<br>
+
+<div class="flexouter" id="table_flex" style="">
+  <div class="flexcontainer" style="padding:10px;margin: 0 auto;">
+    <div id="table_outer" style="border-radius:6px;">
+      <table id="table1" class="chart" style="width:100%;position:relative;max-height:180px;"></table>
+    </div>
+  </div>
+</div>
+
+
+<div class="flexcontainer" id="flex-collapse" style="height:auto;">
+  <button class="collapsible" onclick="collapsible(this)" id="0" style="border:none;margin-bottom:30px;">Notes&#160;</button>
+  <div class="content" style="height:auto;">
+    <ul style="font-size:11px;margin-left:-15px;padding-bottom:2px;">
+      <li>Data is sourced from Score Golf (https://scoregolf.com/) - May 2021</li>
+      <li>Per capita data displays values per 100,000 people</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+
+  var course_source = $.ajax({type: "GET", url: "https://raw.githubusercontent.com/fitzpk/visual-city-limits/main/javascript/score-golf/json/bubble_data.json", async: false}).responseText;
+  var courseData = JSON.parse(course_source);
+
+  var table1 = $('#table1').DataTable({
+    data: courseData,
+    //"bFilter": false,
+    "bInfo": false,
+    "bLengthChange": false,
+    "bPaginate": false,
+    "bAutoWidth": true,
+    "sScrollX": true,
+    "sScrollX": "100%",
+    "sScrollY": "400px",
+    //"order": [[ 3, "asc" ]],
+    "language": {
+      searchPlaceholder: "Find a Course",
+      search: "",
+    },
+    columns: [
+        { title: 'Course', data: 'course', className: 'dt-left' },
+        //{ title: 'Region', data: 'region', className: 'dt-left' },
+        { title: 'Province', data: 'province', className: 'dt-left', searchable:false},
+        { title: 'Score Golf Stars', data: 'stars' , searchable:false, sortable: false, render: function(data, type, row, meta) {
+          if (data == 'Not Rated') {
+            display_value = data;
+          }
+          else if (data == '5') {
+            display_value = '<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>';
+          }
+          else if (data == '4') {
+            display_value = '<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span>';
+          }
+          else if (data == '3') {
+            display_value = '<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>';
+          }
+          else if (data == '2') {
+            display_value = '<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>';
+          }
+          else if (data == '1') {
+            display_value = '<span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>';
+          }
+          else {
+            display_value = data;
+          }
+          return type === 'display' ?
+          display_value: data;
+          }
+        },
+        { title: 'Access', data: 'access', searchable:false, sortable: false },
+        { title: 'Yards', data: 'yards', searchable:false },
+        { title: 'Slope', data: 'slope', searchable:false },
+        { title: 'Rating', data: 'rating', searchable:false },
+    ],
+    //"createdRow": function(row, data, index){
+    //    if(data['institution'] == 'McMaster University, Faculty of Engineering'){
+    //      $(row).addClass('boldRow');
+    //    }
+    //},
+  });
+</script>
+
+<script>
+  // ****** MAP SETTINGS ******
+  // Import data
+  var map_source = $.ajax({type: "GET", url: "https://raw.githubusercontent.com/fitzpk/visual-city-limits/main/javascript/score-golf/json/map_data.json", async: false}).responseText;
+  var mapData = JSON.parse(map_source);
+
+  // Create map instance
+  var map_chart = am4core.create("chartdiv", am4maps.MapChart);
+  map_chart.geodata = am4geodata_canadaLow;
+  // Make map load polygon (like country names) data from GeoJSON
+
+  // Set projection
+  map_chart.projection.d3Projection = am4maps.d3geo.geoConicEqualArea();
+  map_chart.deltaLongitude = 100;
+
+  // Create map polygon series
+  var polygonSeries = map_chart.series.push(new am4maps.MapPolygonSeries());
+  polygonSeries.dataFields.name = "prov_short";
+  polygonSeries.dataFields.id = "id";
+  polygonSeries.dataFields.value = "crs_p_person";
+  polygonSeries.useGeodata = true;
+  polygonSeries.data = mapData;
+
+  // Find the minimum value (that isn't zero) for the selected json field - need min for heat rules
+  var minField = polygonSeries.dataFields.value;
+  var dataFiltered = mapData.filter(element => element[minField] != 0);
+  var min_extent = dataFiltered.reduce((a,b)=>a[minField]<b[minField]?a:b)[minField];
+
+  polygonSeries.heatRules.push({
+    property: "fill",
+    target: polygonSeries.mapPolygons.template,
+    min: am4core.color("#F9EFD9"),
+    max: am4core.color("#B2252D"),
+    minValue: min_extent,
+  });
+
+  // Adapter used to grey out provinces with no data for the current metric
+  polygonSeries.mapPolygons.template.adapter.add("fill", function(fill, target) {
+    if (target.dataItem.value == undefined) {
+      fill = "#d7d7d7";
+    }
+    return fill;
+  });
+
+  // Configure series
+  var polygonTemplate = polygonSeries.mapPolygons.template;
+  polygonTemplate.fill = am4core.color("#74B266");
+  //polygonTemplate.tooltipText = "{province}"+"\n"+"{rating}"+"\n"+"{slope}"+"\n"+"{population}";
+  polygonTemplate.tooltipHTML = `
+  <center><strong>{province}</strong></center>
+  <hr />
+  <table>
+  <tr>
+    <th align="left">Courses</th>
+    <td>{course_count}</td>
+  </tr>
+  <tr>
+    <th align="left">Holes</th>
+    <td>{hole_count}</td>
+  </tr>
+  <tr>
+    <th align="left">Mean Rating</th>
+    <td>{rating}</td>
+  </tr>
+  <tr>
+    <th align="left">Mean Slope</th>
+    <td>{slope}</td>
+  </tr>
+  <tr>
+    <th align="left">Population</th>
+    <td>{population}</td>
+  </tr>
+  <tr>
+    <th align="left">Land Area (km2)</th>
+    <td>{area}</td>
+  </tr>
+  <tr>
+    <th align="left">Accessibility</th>
+    <td>{access}</td>
+  </tr>
+  </table>
+  <hr />`;
+
+
+  // Create hover state and set alternative fill color
+  var hs = polygonTemplate.states.create("hover");
+  hs.properties.fill = am4core.color("#ffffff");
+
+  // Add zoom buttons - Commented out for now because we don't have any data below provinces
+  //map_chart.zoomControl = new am4maps.ZoomControl();
+  //map_chart.zoomControl.valign = "top";
+  //map_chart.zoomControl.align = "left";
+  //map_chart.zoomControl.fill = "#dbdbdb";
+
+  // Disable drag, wheel, and zoom functionality
+  map_chart.seriesContainer.draggable = false;
+  map_chart.chartContainer.wheelable = false;
+  map_chart.maxZoomLevel = 1;
+
+
+  // ****** BAR CHART SETTINGS ******
+  var bar_chart = am4core.create("chartdiv2", am4charts.XYChart);
+  bar_chart.tooltip.disabled = true;
+
+  var valueAxis = bar_chart.yAxes.push(new am4charts.ValueAxis());
+  valueAxis.min = 0;
+  valueAxis.extraMax = 0.1;
+  valueAxis.renderer.labels.template.disabled = true;
+  valueAxis.renderer.grid.template.disabled = true;
+
+  var categoryAxis = bar_chart.xAxes.push(new am4charts.CategoryAxis());
+  categoryAxis.dataFields.category = "prov_short";
+  categoryAxis.renderer.grid.template.location = 0;
+  categoryAxis.renderer.minGridDistance = 1;
+  categoryAxis.renderer.labels.template.fill = '#d3d3d3';
+  categoryAxis.renderer.grid.template.disabled = true;
+
+
+  var series = bar_chart.series.push(new am4charts.ColumnSeries());
+  series.dataFields.categoryX = "prov_short";
+  series.dataFields.value = "crs_p_person";
+  series.dataFields.name = "prov_short";
+  series.dataFields.valueY = "crs_p_person";
+  //series.columns.template.tooltipText = "{valueX.value}";
+  series.columns.template.strokeOpacity = 0;
+  series.columns.template.column.cornerRadiusTopLeft = 5;
+  series.columns.template.column.cornerRadiusTopRight = 5;
+
+  var labelBullet = series.bullets.push(new am4charts.LabelBullet())
+  labelBullet.label.text = "{valueY.value}";
+  labelBullet.label.fill = "#ffffff";
+  labelBullet.label.fontSize = 12;
+  labelBullet.label.truncate = false;
+  labelBullet.locationX = 0.5;
+  labelBullet.locationY = 0;
+  labelBullet.dy = -10;
+
+  series.heatRules.push({
+    property: "fill",
+    target: series.columns.template,
+    min: am4core.color("#F9EFD9"),
+    max: am4core.color("#B2252D"),
+    minValue: min_extent,
+  });
+
+  bar_chart.data = mapData;
+  categoryAxis.sortBySeries = series;
+
+
+
+  // ****** RADAR CHART SETTINGS ******
+  var bub_chart = am4core.create("chartdiv3", am4charts.XYChart);
+  bub_chart.paddingRight = 40;
+  bub_chart.data = courseData;
+  bub_chart.scrollbarX = new am4core.Scrollbar();
+  bub_chart.scrollbarX.minHeight = 10;
+
+  var title = bub_chart.titles.create();
+  title.text = "DISTRIBUTION OF COURSES BY PROVINCE";
+  title.fontSize = 18;
+  title.marginBottom = 20;
+  title.align = "left";
+  title.fill = "#ffffff";
+
+  // Create axes
+  var xAxis = bub_chart.xAxes.push(new am4charts.ValueAxis());
+  xAxis.renderer.grid.template.disabled = true;
+  xAxis.renderer.baseGrid.disabled = true;
+  xAxis.renderer.labels.template.fill = "#d3d3d3";
+  //xAxis.min = 0;
+
+  var yAxis = bub_chart.yAxes.push(new am4charts.ValueAxis());
+  yAxis.renderer.grid.template.disabled = false;
+  yAxis.renderer.grid.template.stroke = "#d3d3d3";
+  yAxis.renderer.baseGrid.disabled = true;
+  yAxis.renderer.labels.template.fill = "#d3d3d3";
+  yAxis.renderer.labels.template.horizontalCenter = "middle";
+  yAxis.renderer.labels.template.verticalCenter = "middle";
+  yAxis.renderer.minGridDistance = 13;
+
+  var bubSeries = bub_chart.series.push(new am4charts.LineSeries());
+  bubSeries.dataFields.valueX = "slope";
+  bubSeries.dataFields.valueY = "y_jitter";
+  bubSeries.dataFields.name = "prov_short";
+  bubSeries.strokeOpacity = 0;
+  bubSeries.sequencedInterpolation = true;
+  bubSeries.tooltip.pointerOrientation = "vertical";
+  bubSeries.tooltip.background.pointerLength = 0;
+
+  var bullet = bubSeries.bullets.push(new am4charts.CircleBullet());
+  bullet.circle.fill = am4core.color("#02a1d3");
+  bullet.circle.strokeOpacity = 1;
+  bullet.circle.strokeWidth = 0.5;
+  bullet.circle.fillOpacity = 0.8;
+  bullet.circle.stroke = am4core.color("#ffffff");
+  bullet.circle.hiddenState.properties.opacity = 0;
+  bullet.circle.tooltipX = am4core.percent(0);
+  bullet.circle.tooltipY = am4core.percent(0);
+  bullet.circle.radius = 4;
+  bullet.circle.tooltipHTML = `
+  <center><strong>{course}</strong></center>
+  <hr />
+  <center><table>
+  <tr>
+    <th>Slope</th>
+    <td>{slope}</td>
+  </tr>
+  </table></center>`;
+
+  // Customize y axis labels
+  var prov_dict={
+    13:"AB",
+    12:"BC",
+    11:"MB",
+    10:"NB",
+    9:"NL",
+    8:"NS",
+    7:"NT",
+    6:"NU",
+    5:"ON",
+    4:"PE",
+    3:"QC",
+    2:"SK",
+    1:"YT"
+  };
+  yAxis.renderer.labels.template.adapter.add("textOutput", function(text) {
+    if (text==14 || text==0) {
+      var new_text = "";
+    }
+    else {
+      var new_text = prov_dict[text];
+    }
+    return new_text;
+  });
+
+  // switch between map and globe
+  var absolutePerCapitaSwitch = bub_chart.createChild(am4core.SwitchButton);
+  absolutePerCapitaSwitch.align = "center";
+  //absolutePerCapitaSwitch.y = 15;
+  absolutePerCapitaSwitch.leftLabel.text = "Slope";
+  absolutePerCapitaSwitch.leftLabel.fill = am4core.color("#ffffff");
+  absolutePerCapitaSwitch.rightLabel.fill = am4core.color("#ffffff");
+  absolutePerCapitaSwitch.rightLabel.text = "Course Rating";
+  absolutePerCapitaSwitch.rightLabel.interactionsEnabled = true;
+  //absolutePerCapitaSwitch.tooltipText = "Display the average slope or average course rating."
+  //absolutePerCapitaSwitch.tooltip.background.pointerLength = 0;
+  absolutePerCapitaSwitch.verticalCenter = "top";
+
+  absolutePerCapitaSwitch.events.on("toggled", function() {
+    if (absolutePerCapitaSwitch.isActive) {
+      bubSeries.dataFields.valueX = "rating";
+      bullet.circle.tooltipHTML = `
+      <center><strong>{course}</strong></center>
+      <hr />
+      <center><table>
+      <tr>
+        <th>Rating</th>
+        <td>{rating}</td>
+      </tr>
+      </table></center>`;
+      bullet.circle.fill = am4core.color("#87D980");
+    } else {
+      bubSeries.dataFields.valueX = "slope";
+      bullet.circle.tooltipHTML = `
+      <center><strong>{course}</strong></center>
+      <hr />
+      <center><table>
+      <tr>
+        <th>Slope</th>
+        <td>{slope}</td>
+      </tr>
+      </table></center>`;
+      bullet.circle.fill = am4core.color("#02a1d3");
+    }
+    bub_chart.invalidateData();
+  })
+
+
+
+  var hs_bar = series.columns.template.states.create("hover_bar");
+  hs_bar.properties.fill = am4core.color("#ffffff");
+
+  var hs_poly = polygonSeries.mapPolygons.template.states.create("hover_poly");
+  hs_poly.properties.fill = am4core.color("#ffffff");
+
+  // Function used to highlight selected province in both charts when map is hovered
+  polygonSeries.mapPolygons.template.events.on("over", function(event) {
+    prov_hovered = event.target.dataItem.name;
+    //alert(prov_hovered);
+    event.target.setState("hover_poly");
+    event.target.tooltip.disabled=false;
+
+    series.columns.each(function(column) {
+      col_name = column.dataItem.name;
+      if (prov_hovered == col_name){
+        //alert(column.dataItem.name);
+        column.setState("hover_bar");
+      }
+    });
+
+    var lookup = Object.keys(prov_dict)[Object.values(prov_dict).indexOf(prov_hovered)];
+    var range = yAxis.axisRanges.create();
+    var colour_field = bubSeries.dataFields.valueX;
+    console.log(colour_field);
+    if (colour_field == "rating"){
+      colo = "#87D980";
+    }
+    else if (colour_field == "slope") {
+      colo = "#02a1d3";
+    }
+    range.value = lookup;
+    range.grid.stroke = am4core.color(colo);
+    range.grid.strokeWidth = 2.5;
+    range.grid.strokeOpacity = 1;
+
+    /*
+    // This adapter is used to highlight the selected provinces bubbles
+    // Note: commented out because it lags with too many bubbles, kept in for future reference
+    bullet.circle.adapter.add("fill", function(fill, target) {
+      //current_color = bullet.circle.fill.hex;
+      if (target.dataItem.name == prov_hovered) {
+        fill = am4core.color("#ffffff");
+      }
+      return fill;
+    });
+    bub_chart.invalidateData();
+    */
+  });
+
+
+  // Function used to remove highlight from both charts when map is unhovered
+  polygonSeries.mapPolygons.template.events.on("out", function(event) {
+      if (event.target.value == undefined){
+        event.target.fill = "#d7d7d7";
+      }
+      else {
+        event.target.setState("default");
+      }
+      series.columns.each(function(column) {
+        col_name = column.dataItem.name;
+        if (prov_hovered == col_name){
+          //alert(column.dataItem.name);
+          column.setState("default");
+        }
+      });
+
+      yAxis.axisRanges.clear();
+
+      // Remove adapter commented out above
+      //bullet.circle.adapter.remove("fill");
+      //bub_chart.invalidateData();
+  });
+
+  // Function used to highlight selected province in both charts when bar chart is hovered
+  series.columns.template.events.on("over", function(event) {
+    prov_hovered = event.target.dataItem.name;
+    event.target.setState("hover_bar");
+
+    polygonSeries.mapPolygons.each(function(poly) {
+      poly_name = poly.dataItem.name;
+      if (prov_hovered == poly_name){
+        poly.setState("hover_poly");
+        poly.tooltip.disabled=true;
+      }
+    })
+
+    var lookup = Object.keys(prov_dict)[Object.values(prov_dict).indexOf(prov_hovered)];
+    var range = yAxis.axisRanges.create();
+    var colour_field = bubSeries.dataFields.valueX;
+    console.log(colour_field);
+    if (colour_field == "rating"){
+      colo = "#87D980";
+    }
+    else if (colour_field == "slope") {
+      colo = "#02a1d3";
+    }
+    range.value = lookup;
+    range.grid.stroke = am4core.color(colo);
+    range.grid.strokeWidth = 2.5;
+    range.grid.strokeOpacity = 1;
+    /*
+    // This adapter is used to highlight the selected provinces bubbles
+    // Note: commented out because it lags with too many bubbles, kept in for future reference
+    bullet.circle.adapter.add("fill", function(fill, target) {
+      //current_color = bullet.circle.fill.hex;
+      if (target.dataItem.name == prov_hovered) {
+        fill = am4core.color("#ffffff");
+      }
+      //else {
+      //   fill = am4core.color(current_color);
+      //}
+      return fill;
+    });
+    bub_chart.invalidateData();
+    */
+
+  });
+
+  // Function used to remove highlight from both charts when bar chart is unhovered
+  series.columns.template.events.on("out", function(event) {
+      event.target.setState("default");
+      polygonSeries.mapPolygons.each(function(poly) {
+        poly_name = poly.dataItem.name;
+        if (prov_hovered == poly_name){
+          //alert(column.dataItem.name);
+          poly.setState("default");
+        }
+
+      });
+
+      yAxis.axisRanges.clear();
+
+      // Remove adapter that is commented out above
+      //bullet.circle.adapter.remove("fill");
+      //bub_chart.invalidateData();
+  });
+
+  function selectValue() {
+    //Get the clicked metric and clicked circle size value
+    var new_val = document.getElementsByClassName("subDrop activeClear")[0].title;
+    //console.log(new_val);
+
+    //Reset datafields and tooltip based on clicked values
+    polygonSeries.dataFields.value = new_val;
+    var minField = polygonSeries.dataFields.value;
+    var dataFiltered = mapData.filter(element => element[minField] != 0);
+    var min_extent = dataFiltered.reduce((a,b)=>a[minField]<b[minField]?a:b)[minField];
+    polygonSeries.heatRules.push({
+      property: "fill",
+      target: polygonSeries.mapPolygons.template,
+      min: am4core.color("#F9EFD9"),
+      max: am4core.color("#B2252D"),
+      minValue: min_extent,
+    });
+    polygonSeries.invalidateData();
+
+    series.dataFields.value = new_val;
+    series.dataFields.valueY = new_val;
+    series.heatRules.push({
+      property: "fill",
+      target: series.columns.template,
+      min: am4core.color("#F9EFD9"),
+      max: am4core.color("#B2252D"),
+      minValue: min_extent,
+    });
+    bar_chart.invalidateData();
+  }
+
+</script>
+
+
+
+</body>
+</html>
