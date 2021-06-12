@@ -1,0 +1,351 @@
+[{
+    "province": "MB",
+    "hex_id": "MB49000965",
+    "geoPolygon": [
+        [
+            {
+                "latitude": 49.046761,
+                "longitude": -96.526771
+            },
+            {
+                "latitude": 49.021193,
+                "longitude": -96.466491
+            },
+            {
+                "latitude": 48.969199,
+                "longitude": -96.466491
+            },
+            {
+                "latitude": 48.943631,
+                "longitude": -96.526771
+            },
+            {
+                "latitude": 48.969199,
+                "longitude": -96.58705099999999
+            },
+            {
+                "latitude": 49.021193,
+                "longitude": -96.58705099999999
+            },
+            {
+                "latitude": 49.046761,
+                "longitude": -96.526771
+            }
+        ]
+    ]
+},{
+    "province": "MB",
+    "hex_id": "MB49000966",
+    "geoPolygon": [
+        [
+            {
+                "latitude": 49.046761,
+                "longitude": -96.64733000000001
+            },
+            {
+                "latitude": 49.021193,
+                "longitude": -96.58705000000002
+            },
+            {
+                "latitude": 48.969199,
+                "longitude": -96.58705000000002
+            },
+            {
+                "latitude": 48.943631,
+                "longitude": -96.64733000000001
+            },
+            {
+                "latitude": 48.969199,
+                "longitude": -96.70761
+            },
+            {
+                "latitude": 49.021193,
+                "longitude": -96.70761
+            },
+            {
+                "latitude": 49.046761,
+                "longitude": -96.64733000000001
+            }
+        ]
+    ]
+},{
+    "province": "MB",
+    "hex_id": "MB49000968",
+    "geoPolygon": [
+        [
+            {
+                "latitude": 49.046761,
+                "longitude": -96.76789000000001
+            },
+            {
+                "latitude": 49.021193,
+                "longitude": -96.70761000000002
+            },
+            {
+                "latitude": 48.969199,
+                "longitude": -96.70761000000002
+            },
+            {
+                "latitude": 48.943631,
+                "longitude": -96.76789000000001
+            },
+            {
+                "latitude": 48.969199,
+                "longitude": -96.82817
+            },
+            {
+                "latitude": 49.021193,
+                "longitude": -96.82817
+            },
+            {
+                "latitude": 49.046761,
+                "longitude": -96.76789000000001
+            }
+        ]
+    ]
+},{
+    "province": "MB",
+    "hex_id": "MB49000979",
+    "geoPolygon": [
+        [
+            {
+                "latitude": 49.046761,
+                "longitude": -97.852929
+            },
+            {
+                "latitude": 49.021193,
+                "longitude": -97.79264900000001
+            },
+            {
+                "latitude": 48.969199,
+                "longitude": -97.79264900000001
+            },
+            {
+                "latitude": 48.943631,
+                "longitude": -97.852929
+            },
+            {
+                "latitude": 48.969199,
+                "longitude": -97.913209
+            },
+            {
+                "latitude": 49.021193,
+                "longitude": -97.913209
+            },
+            {
+                "latitude": 49.046761,
+                "longitude": -97.852929
+            }
+        ]
+    ]
+},{
+    "province": "MB",
+    "hex_id": "MB49000980",
+    "geoPolygon": [
+        [
+            {
+                "latitude": 49.046761,
+                "longitude": -97.973489
+            },
+            {
+                "latitude": 49.021193,
+                "longitude": -97.91320900000001
+            },
+            {
+                "latitude": 48.969199,
+                "longitude": -97.91320900000001
+            },
+            {
+                "latitude": 48.943631,
+                "longitude": -97.973489
+            },
+            {
+                "latitude": 48.969199,
+                "longitude": -98.03376899999999
+            },
+            {
+                "latitude": 49.021193,
+                "longitude": -98.03376899999999
+            },
+            {
+                "latitude": 49.046761,
+                "longitude": -97.973489
+            }
+        ]
+    ]
+},{
+    "province": "MB",
+    "hex_id": "MB49020959",
+    "geoPolygon": [
+        [
+            {
+                "latitude": 49.072561,
+                "longitude": -95.863691
+            },
+            {
+                "latitude": 49.046993,
+                "longitude": -95.80341100000001
+            },
+            {
+                "latitude": 48.99499900000001,
+                "longitude": -95.80341100000001
+            },
+            {
+                "latitude": 48.96943100000001,
+                "longitude": -95.863691
+            },
+            {
+                "latitude": 48.99499900000001,
+                "longitude": -95.923971
+            },
+            {
+                "latitude": 49.046993,
+                "longitude": -95.923971
+            },
+            {
+                "latitude": 49.072561,
+                "longitude": -95.863691
+            }
+        ]
+    ]
+},{
+    "province": "MB",
+    "hex_id": "MB49020960",
+    "geoPolygon": [
+        [
+            {
+                "latitude": 49.072561,
+                "longitude": -95.984251
+            },
+            {
+                "latitude": 49.046993,
+                "longitude": -95.92397100000001
+            },
+            {
+                "latitude": 48.99499900000001,
+                "longitude": -95.92397100000001
+            },
+            {
+                "latitude": 48.96943100000001,
+                "longitude": -95.984251
+            },
+            {
+                "latitude": 48.99499900000001,
+                "longitude": -96.04453099999999
+            },
+            {
+                "latitude": 49.046993,
+                "longitude": -96.04453099999999
+            },
+            {
+                "latitude": 49.072561,
+                "longitude": -95.984251
+            }
+        ]
+    ]
+},{
+    "province": "MB",
+    "hex_id": "MB49020961",
+    "geoPolygon": [
+        [
+            {
+                "latitude": 49.072561,
+                "longitude": -96.104811
+            },
+            {
+                "latitude": 49.046993,
+                "longitude": -96.044531
+            },
+            {
+                "latitude": 48.99499900000001,
+                "longitude": -96.044531
+            },
+            {
+                "latitude": 48.96943100000001,
+                "longitude": -96.104811
+            },
+            {
+                "latitude": 48.99499900000001,
+                "longitude": -96.16509099999999
+            },
+            {
+                "latitude": 49.046993,
+                "longitude": -96.16509099999999
+            },
+            {
+                "latitude": 49.072561,
+                "longitude": -96.104811
+            }
+        ]
+    ]
+},{
+    "province": "MB",
+    "hex_id": "MB49020962",
+    "geoPolygon": [
+        [
+            {
+                "latitude": 49.072561,
+                "longitude": -96.225371
+            },
+            {
+                "latitude": 49.046993,
+                "longitude": -96.165091
+            },
+            {
+                "latitude": 48.99499900000001,
+                "longitude": -96.165091
+            },
+            {
+                "latitude": 48.96943100000001,
+                "longitude": -96.225371
+            },
+            {
+                "latitude": 48.99499900000001,
+                "longitude": -96.28565099999999
+            },
+            {
+                "latitude": 49.046993,
+                "longitude": -96.28565099999999
+            },
+            {
+                "latitude": 49.072561,
+                "longitude": -96.225371
+            }
+        ]
+    ]
+},{
+    "province": "MB",
+    "hex_id": "MB49020963",
+    "geoPolygon": [
+        [
+            {
+                "latitude": 49.072561,
+                "longitude": -96.34593100000001
+            },
+            {
+                "latitude": 49.046993,
+                "longitude": -96.28565100000002
+            },
+            {
+                "latitude": 48.99499900000001,
+                "longitude": -96.28565100000002
+            },
+            {
+                "latitude": 48.96943100000001,
+                "longitude": -96.34593100000001
+            },
+            {
+                "latitude": 48.99499900000001,
+                "longitude": -96.406211
+            },
+            {
+                "latitude": 49.046993,
+                "longitude": -96.406211
+            },
+            {
+                "latitude": 49.072561,
+                "longitude": -96.34593100000001
+            }
+        ]
+    ]
+}]
