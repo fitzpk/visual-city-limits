@@ -7,4 +7,4 @@ Repository of charts and visuals created with Python, Javascript, and Tableau.
 - Dumbbell Chart
 
 <strong>Javascript-based</strong>
-- <a href="">Canadian Golf Course Dashboard</a>
+- <a href="https://fitzpk.github.io/visual-city-limits/javascript/score-golf/score_app.html">Canadian Golf Course Dashboard</a>
