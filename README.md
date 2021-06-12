@@ -6,5 +6,5 @@ Repository of charts and visuals created with Python, Javascript, and Tableau.
 - Raincloud Chart
 - Dumbbell Chart
 
-Javascript-based
+<strong>Javascript-based</strong>
 - <a href="">Canadian Golf Course Dashboard</a>
