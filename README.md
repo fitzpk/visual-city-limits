@@ -1,7 +1,7 @@
 # visual-city-limits
 Repository of charts and visuals created with Python, Javascript, and Tableau.
 
-Python-based
+<strong>Python-based</strong>
 - Bump Chart
 - Raincloud Chart
 - Dumbbell Chart
