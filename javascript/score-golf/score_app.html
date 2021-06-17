@@ -2,6 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
   <title>Golf Courses of Canada</title>
 </head>
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -18,7 +19,7 @@
     font-size: 30px;
     font-weight: bold;
     margin: -5px;
-    padding: 20px;
+    padding:20px;
     padding-top:10px;
     color: rgba(236,236,236,1);
     background-color: #242a30;
@@ -269,14 +270,27 @@
     @media only screen and (max-width: 760px) {
       .flexouter {
         flex-wrap: wrap;
+        flex-direction: column;
         width: 95vw;
       }
       #chartdiv, #chartdiv2, #chartdiv3 {
         width: 90vw;
       }
       #table_outer {
-        width:90vw;
+        width: 90vw;
         margin-left:-10px;
+      }
+      #chartdiv {
+        height: 300px;
+      }
+      #chartdiv2 {
+        height: 180px;
+      }
+      #chartdiv3 {
+        height: 70%;
+      }
+      #title {
+        font-size: 20px;
       }
 
     }
@@ -371,7 +385,6 @@
     <span id="metric_txt">Metric</span>
     <div class="metric_filter">
       <div class="dropdown">
-        <!--<img id="filterIMG" src="https://dl.dropbox.com/s/5qsl5ftna77ug51/filter_transp_white.png?dl=0" width="28" height="28">-->
         <button id="fixedBTN" class="dropbtn" onmouseover="displayDrops(this);" onclick="hideClick();">Courses per Capita</button>
         <div class="dropdown-content" id="cont">
           <a href="javascript:void(0)"  class="subDrop" id="Rating" title="rating" onclick="highlightSub(this);changeText(this);selectValue(this.title);">Rating</a>
@@ -584,7 +597,7 @@
 
   var valueAxis = bar_chart.yAxes.push(new am4charts.ValueAxis());
   valueAxis.min = 0;
-  valueAxis.extraMax = 0.1;
+  valueAxis.extraMax = 0.2;
   valueAxis.renderer.labels.template.disabled = true;
   valueAxis.renderer.grid.template.disabled = true;
 
