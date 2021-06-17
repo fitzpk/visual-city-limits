@@ -716,13 +716,14 @@
     2:"SK",
     1:"YT"
   };
-  yAxis.renderer.labels.template.adapter.add("textOutput", function(text) {
+  yAxis.renderer.labels.template.adapter.add("textOutput", function(text,target) {
     if (text==14 || text==0) {
       var new_text = "";
     }
     else {
       var new_text = prov_dict[text];
     }
+    //target.propertyFields.
     return new_text;
   });
 
@@ -791,10 +792,9 @@
       }
     });
 
-    var lookup = Object.keys(prov_dict)[Object.values(prov_dict).indexOf(prov_hovered)];
+    lookup = Object.keys(prov_dict)[Object.values(prov_dict).indexOf(prov_hovered)];
     var range = yAxis.axisRanges.create();
     var colour_field = bubSeries.dataFields.valueX;
-    console.log(colour_field);
     if (colour_field == "rating"){
       colo = "#87D980";
     }
@@ -805,6 +805,9 @@
     range.grid.stroke = am4core.color(colo);
     range.grid.strokeWidth = 2.5;
     range.grid.strokeOpacity = 1;
+
+    // Colour the y axis label of hovered province in the bubble chart
+    yAxis.renderer.labels.values[parseInt(lookup)+3].fill = colo;
 
     /*
     // This adapter is used to highlight the selected provinces bubbles
@@ -837,6 +840,7 @@
         }
       });
 
+      yAxis.renderer.labels.values[parseInt(lookup)+3].fill = "#d3d3d3";
       yAxis.axisRanges.clear();
 
       // Remove adapter commented out above
@@ -857,10 +861,9 @@
       }
     })
 
-    var lookup = Object.keys(prov_dict)[Object.values(prov_dict).indexOf(prov_hovered)];
+    lookup = Object.keys(prov_dict)[Object.values(prov_dict).indexOf(prov_hovered)];
     var range = yAxis.axisRanges.create();
     var colour_field = bubSeries.dataFields.valueX;
-    console.log(colour_field);
     if (colour_field == "rating"){
       colo = "#87D980";
     }
@@ -871,6 +874,9 @@
     range.grid.stroke = am4core.color(colo);
     range.grid.strokeWidth = 2.5;
     range.grid.strokeOpacity = 1;
+
+    // Colour the y axis label of hovered province in the bubble chart
+    yAxis.renderer.labels.values[parseInt(lookup)+3].fill = colo;
     /*
     // This adapter is used to highlight the selected provinces bubbles
     // Note: commented out because it lags with too many bubbles, kept in for future reference
@@ -901,6 +907,7 @@
 
       });
 
+      yAxis.renderer.labels.values[parseInt(lookup)+3].fill = "#d3d3d3";
       yAxis.axisRanges.clear();
 
       // Remove adapter that is commented out above
