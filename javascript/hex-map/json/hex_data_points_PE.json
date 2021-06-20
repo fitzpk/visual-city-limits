@@ -1,1245 +1,485 @@
 [{
-    "latitude": 46.108552,
-    "longitude": -62.649453,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.108552,
-    "longitude": -62.890572999999996,
-    "color": "#f2f0f7"
-},{
     "latitude": 46.132899,
     "longitude": -62.468613,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.132899,
-    "longitude": -63.191972,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.132899,
-    "longitude": -63.312532,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.205528,
-    "longitude": -62.408333,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.205528,
-    "longitude": -62.890572999999996,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.205528,
     "longitude": -63.131692,
-    "color": "#54278f"
+    "color": "#e31a1c"
 },{
     "latitude": 46.205528,
     "longitude": -63.252252,
-    "color": "#9e9ac8"
+    "color": "#fecc5c"
 },{
     "latitude": 46.351316,
     "longitude": -62.287773,
-    "color": "#54278f"
-},{
-    "latitude": 46.351316,
-    "longitude": -62.770013,
-    "color": "#f2f0f7"
+    "color": "#e31a1c"
 },{
     "latitude": 46.351316,
     "longitude": -63.613932,
-    "color": "#cbc9e2"
+    "color": "#ffffb2"
 },{
     "latitude": 46.815705,
     "longitude": -64.035891,
-    "color": "#54278f"
-},{
-    "latitude": 46.815705,
-    "longitude": -64.277011,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.375777,
-    "longitude": -62.106933999999995,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.278496000000004,
-    "longitude": -62.348053,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.278496000000004,
-    "longitude": -62.830293000000005,
-    "color": "#f2f0f7"
+    "color": "#e31a1c"
 },{
     "latitude": 46.278496000000004,
     "longitude": -63.191972,
-    "color": "#54278f"
+    "color": "#e31a1c"
 },{
     "latitude": 46.278496000000004,
     "longitude": -63.674212,
-    "color": "#9e9ac8"
-},{
-    "latitude": 46.302677,
-    "longitude": -62.649453,
-    "color": "#f2f0f7"
+    "color": "#fecc5c"
 },{
     "latitude": 46.473231,
     "longitude": -63.433092,
-    "color": "#756bb1"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.473231,
     "longitude": -63.674212,
-    "color": "#9e9ac8"
-},{
-    "latitude": 46.473231,
-    "longitude": -63.794771999999995,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.497493,
-    "longitude": -62.167214,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.157019,
-    "longitude": -62.770013,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.157019,
-    "longitude": -63.011132999999994,
-    "color": "#f2f0f7"
+    "color": "#fecc5c"
 },{
     "latitude": 46.181388,
     "longitude": -62.589172999999995,
-    "color": "#756bb1"
-},{
-    "latitude": 46.181388,
-    "longitude": -63.433092,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.61974,
-    "longitude": -64.156451,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.61974,
-    "longitude": -64.277011,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.644064,
-    "longitude": -63.975611,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.693009,
-    "longitude": -64.096171,
-    "color": "#f2f0f7"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.693009,
     "longitude": -64.21673100000001,
-    "color": "#54278f"
-},{
-    "latitude": 46.741999,
-    "longitude": -63.975611,
-    "color": "#f2f0f7"
+    "color": "#e31a1c"
 },{
     "latitude": 45.963405,
     "longitude": -62.528893000000004,
-    "color": "#cbc9e2"
-},{
-    "latitude": 45.987685,
-    "longitude": -62.830293000000005,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.011745,
     "longitude": -62.649453,
-    "color": "#756bb1"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.399998,
     "longitude": -64.096171,
-    "color": "#54278f"
-},{
-    "latitude": 46.424482,
-    "longitude": -62.227493,
-    "color": "#f2f0f7"
+    "color": "#e31a1c"
 },{
     "latitude": 46.424482,
     "longitude": -62.70973299999999,
-    "color": "#756bb1"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.424482,
     "longitude": -63.312532,
-    "color": "#9e9ac8"
-},{
-    "latitude": 46.424482,
-    "longitude": -63.553652,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.229921000000004,
-    "longitude": -62.70973299999999,
-    "color": "#f2f0f7"
+    "color": "#fecc5c"
 },{
     "latitude": 46.229921000000004,
     "longitude": -63.553652,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.254081,
-    "longitude": -62.528893000000004,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.254081,
     "longitude": -63.011132999999994,
-    "color": "#756bb1"
-},{
-    "latitude": 46.254081,
-    "longitude": -63.372811999999996,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.375777,
-    "longitude": -62.589172999999995,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.546306,
-    "longitude": -63.734492,
-    "color": "#f2f0f7"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.375777,
     "longitude": -63.191972,
-    "color": "#756bb1"
-},{
-    "latitude": 46.375777,
-    "longitude": -63.433092,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.399998,
-    "longitude": -62.408333,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.570859999999996,
-    "longitude": -64.035891,
-    "color": "#f2f0f7"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.497493,
     "longitude": -64.096171,
-    "color": "#756bb1"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.522023,
     "longitude": -63.553652,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.522023,
-    "longitude": -63.91533100000001,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.864807,
-    "longitude": -64.156451,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.889236,
-    "longitude": -63.975611,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.399998,
     "longitude": -62.890572999999996,
-    "color": "#cbc9e2"
+    "color": "#ffffb2"
 },{
     "latitude": 46.399998,
     "longitude": -63.011132999999994,
-    "color": "#cbc9e2"
+    "color": "#ffffb2"
 },{
     "latitude": 46.399998,
     "longitude": -63.734492,
-    "color": "#54278f"
-},{
-    "latitude": 46.938404999999996,
-    "longitude": -64.096171,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.938404999999996,
-    "longitude": -64.21673100000001,
-    "color": "#f2f0f7"
-},{
-    "latitude": 47.012386,
-    "longitude": -64.035891,
-    "color": "#f2f0f7"
+    "color": "#e31a1c"
 },{
     "latitude": 46.399998,
     "longitude": -63.855051,
-    "color": "#756bb1"
-},{
-    "latitude": 46.036046999999996,
-    "longitude": -62.950853,
-    "color": "#f2f0f7"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.060127,
     "longitude": -62.528893000000004,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.060127,
-    "longitude": -62.770013,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.741999,
-    "longitude": -64.33729100000001,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.766647,
     "longitude": -64.156451,
-    "color": "#cbc9e2"
-},{
-    "latitude": 45.939365,
-    "longitude": -62.70973299999999,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.302677,
-    "longitude": -63.493371999999994,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.327115,
-    "longitude": -62.468613,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.327115,
     "longitude": -62.950853,
-    "color": "#9e9ac8"
+    "color": "#fecc5c"
 },{
     "latitude": 46.327115,
     "longitude": -63.071412,
-    "color": "#cbc9e2"
+    "color": "#ffffb2"
 },{
     "latitude": 46.327115,
     "longitude": -63.312532,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.327115,
-    "longitude": -63.794771999999995,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.668664,
     "longitude": -64.397571,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.595163,
-    "longitude": -63.855051,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.448724,
-    "longitude": -62.046654000000004,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.448724,
-    "longitude": -62.528893000000004,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.448724,
-    "longitude": -63.131692,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.448724,
     "longitude": -63.975611,
-    "color": "#54278f"
-},{
-    "latitude": 46.473231,
-    "longitude": -62.348053,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.351316,
-    "longitude": -62.528893000000004,
-    "color": "#f2f0f7"
+    "color": "#e31a1c"
 },{
     "latitude": 46.351316,
     "longitude": -63.011132999999994,
-    "color": "#cbc9e2"
+    "color": "#ffffb2"
 },{
     "latitude": 46.351316,
     "longitude": -63.131692,
-    "color": "#9e9ac8"
+    "color": "#fecc5c"
 },{
     "latitude": 46.351316,
     "longitude": -63.372811999999996,
-    "color": "#756bb1"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.375777,
     "longitude": -62.348053,
-    "color": "#cbc9e2"
+    "color": "#ffffb2"
 },{
     "latitude": 46.375777,
     "longitude": -62.830293000000005,
-    "color": "#9e9ac8"
+    "color": "#fecc5c"
 },{
     "latitude": 46.375777,
     "longitude": -63.674212,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.132899,
-    "longitude": -62.70973299999999,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.132899,
-    "longitude": -62.950853,
-    "color": "#f2f0f7"
-},{
-    "latitude": 45.963405,
-    "longitude": -62.770013,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 45.987685,
     "longitude": -62.589172999999995,
-    "color": "#cbc9e2"
+    "color": "#ffffb2"
 },{
     "latitude": 46.157019,
     "longitude": -62.528893000000004,
-    "color": "#9e9ac8"
-},{
-    "latitude": 46.157019,
-    "longitude": -63.252252,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.011745,
-    "longitude": -62.890572999999996,
-    "color": "#f2f0f7"
+    "color": "#fecc5c"
 },{
     "latitude": 46.036046999999996,
     "longitude": -62.468613,
-    "color": "#756bb1"
-},{
-    "latitude": 46.181388,
-    "longitude": -62.830293000000005,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.157019,
-    "longitude": -63.372811999999996,
-    "color": "#f2f0f7"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.717633,
     "longitude": -64.156451,
-    "color": "#9e9ac8"
+    "color": "#fecc5c"
 },{
     "latitude": 46.181388,
     "longitude": -63.071412,
-    "color": "#54278f"
+    "color": "#e31a1c"
 },{
     "latitude": 46.205528,
     "longitude": -62.649453,
-    "color": "#756bb1"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.205528,
     "longitude": -63.493371999999994,
-    "color": "#9e9ac8"
+    "color": "#fecc5c"
 },{
     "latitude": 46.717633,
     "longitude": -64.277011,
-    "color": "#9e9ac8"
+    "color": "#fecc5c"
 },{
     "latitude": 46.375777,
     "longitude": -64.035891,
-    "color": "#756bb1"
-},{
-    "latitude": 46.399998,
-    "longitude": -62.046654000000004,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.399998,
-    "longitude": -62.167214,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.229921000000004,
-    "longitude": -62.468613,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.229921000000004,
-    "longitude": -62.950853,
-    "color": "#f2f0f7"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.399998,
     "longitude": -62.649453,
-    "color": "#9e9ac8"
-},{
-    "latitude": 46.399998,
-    "longitude": -63.252252,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.399998,
-    "longitude": -63.493371999999994,
-    "color": "#f2f0f7"
+    "color": "#fecc5c"
 },{
     "latitude": 46.546306,
     "longitude": -63.613932,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.546306,
-    "longitude": -63.975611,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.229921000000004,
     "longitude": -63.191972,
-    "color": "#54278f"
-},{
-    "latitude": 46.229921000000004,
-    "longitude": -63.312532,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.254081,
-    "longitude": -62.770013,
-    "color": "#f2f0f7"
+    "color": "#e31a1c"
 },{
     "latitude": 46.254081,
     "longitude": -63.613932,
-    "color": "#9e9ac8"
+    "color": "#fecc5c"
 },{
     "latitude": 46.473231,
     "longitude": -64.035891,
-    "color": "#756bb1"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.497493,
     "longitude": -63.493371999999994,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.497493,
-    "longitude": -63.734492,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.497493,
-    "longitude": -63.855051,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.61974,
-    "longitude": -63.91533100000001,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.644064,
-    "longitude": -64.21673100000001,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.644064,
-    "longitude": -64.33729100000001,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.668664,
-    "longitude": -64.035891,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.278496000000004,
-    "longitude": -62.589172999999995,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.278496000000004,
     "longitude": -63.071412,
-    "color": "#54278f"
-},{
-    "latitude": 46.278496000000004,
-    "longitude": -63.433092,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.302677,
-    "longitude": -62.408333,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.302677,
-    "longitude": -62.890572999999996,
-    "color": "#f2f0f7"
+    "color": "#e31a1c"
 },{
     "latitude": 46.302677,
     "longitude": -63.252252,
-    "color": "#756bb1"
-},{
-    "latitude": 46.302677,
-    "longitude": -63.734492,
-    "color": "#f2f0f7"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.327115,
     "longitude": -62.227493,
-    "color": "#54278f"
-},{
-    "latitude": 46.327115,
-    "longitude": -62.70973299999999,
-    "color": "#f2f0f7"
+    "color": "#e31a1c"
 },{
     "latitude": 46.327115,
     "longitude": -63.553652,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.424482,
-    "longitude": -62.468613,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.424482,
-    "longitude": -62.950853,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.424482,
-    "longitude": -63.071412,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.424482,
     "longitude": -63.794771999999995,
-    "color": "#54278f"
+    "color": "#e31a1c"
 },{
     "latitude": 46.424482,
     "longitude": -63.91533100000001,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.424482,
-    "longitude": -64.156451,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.036046999999996,
-    "longitude": -62.70973299999999,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.060127,
-    "longitude": -63.011132999999994,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.084452,
     "longitude": -62.589172999999995,
-    "color": "#9e9ac8"
-},{
-    "latitude": 46.084452,
-    "longitude": -62.830293000000005,
-    "color": "#f2f0f7"
+    "color": "#fecc5c"
 },{
     "latitude": 46.840112,
     "longitude": -64.096171,
-    "color": "#9e9ac8"
+    "color": "#fecc5c"
 },{
     "latitude": 46.766647,
     "longitude": -64.035891,
-    "color": "#54278f"
+    "color": "#e31a1c"
 },{
     "latitude": 46.791033,
     "longitude": -64.21673100000001,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.595163,
-    "longitude": -64.096171,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.448724,
-    "longitude": -62.287773,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.448724,
-    "longitude": -62.770013,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.448724,
     "longitude": -63.372811999999996,
-    "color": "#756bb1"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.448724,
     "longitude": -63.613932,
-    "color": "#54278f"
-},{
-    "latitude": 46.473231,
-    "longitude": -61.986374,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.473231,
-    "longitude": -62.106933999999995,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.473231,
-    "longitude": -62.589172999999995,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.889236,
-    "longitude": -64.21673100000001,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.913955,
-    "longitude": -64.035891,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.963148,
-    "longitude": -64.156451,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.987619,
-    "longitude": -63.975611,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.327115,
-    "longitude": -62.348053,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.327115,
-    "longitude": -62.830293000000005,
-    "color": "#f2f0f7"
+    "color": "#e31a1c"
 },{
     "latitude": 46.327115,
     "longitude": -63.191972,
-    "color": "#54278f"
+    "color": "#e31a1c"
 },{
     "latitude": 46.327115,
     "longitude": -63.674212,
-    "color": "#9e9ac8"
-},{
-    "latitude": 46.132899,
-    "longitude": -63.071412,
-    "color": "#f2f0f7"
+    "color": "#fecc5c"
 },{
     "latitude": 46.157019,
     "longitude": -62.649453,
-    "color": "#54278f"
-},{
-    "latitude": 46.157019,
-    "longitude": -62.890572999999996,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.181388,
-    "longitude": -62.468613,
-    "color": "#f2f0f7"
+    "color": "#e31a1c"
 },{
     "latitude": 46.229921000000004,
     "longitude": -62.589172999999995,
-    "color": "#9e9ac8"
-},{
-    "latitude": 46.229921000000004,
-    "longitude": -63.433092,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.254081,
-    "longitude": -62.408333,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.254081,
-    "longitude": -62.890572999999996,
-    "color": "#f2f0f7"
+    "color": "#fecc5c"
 },{
     "latitude": 46.254081,
     "longitude": -63.131692,
-    "color": "#54278f"
+    "color": "#e31a1c"
 },{
     "latitude": 46.254081,
     "longitude": -63.252252,
-    "color": "#cbc9e2"
+    "color": "#ffffb2"
 },{
     "latitude": 46.254081,
     "longitude": -63.734492,
-    "color": "#54278f"
+    "color": "#e31a1c"
 },{
     "latitude": 46.448724,
     "longitude": -63.734492,
-    "color": "#9e9ac8"
+    "color": "#fecc5c"
 },{
     "latitude": 46.448724,
     "longitude": -63.855051,
-    "color": "#54278f"
-},{
-    "latitude": 46.473231,
-    "longitude": -62.227493,
-    "color": "#f2f0f7"
+    "color": "#e31a1c"
 },{
     "latitude": 46.473231,
     "longitude": -63.312532,
-    "color": "#54278f"
+    "color": "#e31a1c"
 },{
     "latitude": 46.473231,
     "longitude": -63.553652,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.668664,
-    "longitude": -64.156451,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.668664,
-    "longitude": -64.277011,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.693009,
-    "longitude": -63.975611,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.351316,
-    "longitude": -62.167214,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.351316,
-    "longitude": -62.649453,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.351316,
-    "longitude": -63.493371999999994,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.375777,
-    "longitude": -62.468613,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.375777,
     "longitude": -62.950853,
-    "color": "#cbc9e2"
+    "color": "#ffffb2"
 },{
     "latitude": 46.375777,
     "longitude": -63.071412,
-    "color": "#9e9ac8"
+    "color": "#fecc5c"
 },{
     "latitude": 46.375777,
     "longitude": -63.312532,
-    "color": "#cbc9e2"
+    "color": "#ffffb2"
 },{
     "latitude": 46.375777,
     "longitude": -63.794771999999995,
-    "color": "#54278f"
+    "color": "#e31a1c"
 },{
     "latitude": 46.011745,
     "longitude": -62.528893000000004,
-    "color": "#54278f"
-},{
-    "latitude": 46.036046999999996,
-    "longitude": -62.830293000000005,
-    "color": "#f2f0f7"
+    "color": "#e31a1c"
 },{
     "latitude": 46.060127,
     "longitude": -62.649453,
-    "color": "#9e9ac8"
-},{
-    "latitude": 46.864807,
-    "longitude": -64.035891,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.864807,
-    "longitude": -64.277011,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.913955,
-    "longitude": -64.156451,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.278496000000004,
-    "longitude": -62.70973299999999,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.278496000000004,
-    "longitude": -63.553652,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.302677,
-    "longitude": -62.528893000000004,
-    "color": "#f2f0f7"
+    "color": "#fecc5c"
 },{
     "latitude": 46.302677,
     "longitude": -63.011132999999994,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.302677,
-    "longitude": -63.372811999999996,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.399998,
     "longitude": -62.287773,
-    "color": "#cbc9e2"
+    "color": "#ffffb2"
 },{
     "latitude": 46.399998,
     "longitude": -62.770013,
-    "color": "#9e9ac8"
+    "color": "#fecc5c"
 },{
     "latitude": 46.399998,
     "longitude": -63.613932,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.424482,
-    "longitude": -61.986374,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.424482,
-    "longitude": -62.106933999999995,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.595163,
-    "longitude": -63.734492,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.61974,
-    "longitude": -64.035891,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.424482,
     "longitude": -62.589172999999995,
-    "color": "#756bb1"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.424482,
     "longitude": -63.191972,
-    "color": "#756bb1"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.424482,
     "longitude": -63.433092,
-    "color": "#cbc9e2"
+    "color": "#ffffb2"
 },{
     "latitude": 46.424482,
     "longitude": -64.035891,
-    "color": "#756bb1"
-},{
-    "latitude": 46.448724,
-    "longitude": -62.408333,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.448724,
-    "longitude": -62.890572999999996,
-    "color": "#f2f0f7"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.741999,
     "longitude": -64.21673100000001,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.791033,
-    "longitude": -64.33729100000001,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.181388,
     "longitude": -63.191972,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.181388,
-    "longitude": -63.312532,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.205528,
-    "longitude": -62.770013,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.205528,
     "longitude": -63.011132999999994,
-    "color": "#756bb1"
-},{
-    "latitude": 46.205528,
-    "longitude": -63.613932,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.497493,
-    "longitude": -63.975611,
-    "color": "#f2f0f7"
-},{
-    "latitude": 45.987685,
-    "longitude": -62.70973299999999,
-    "color": "#f2f0f7"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.815705,
     "longitude": -64.156451,
-    "color": "#9e9ac8"
+    "color": "#fecc5c"
 },{
     "latitude": 46.522023,
     "longitude": -63.674212,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.522023,
-    "longitude": -63.794771999999995,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.644064,
-    "longitude": -63.855051,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.717633,
-    "longitude": -64.397571,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.741999,
-    "longitude": -64.096171,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.084452,
-    "longitude": -62.950853,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.108552,
     "longitude": -62.528893000000004,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.108552,
-    "longitude": -62.770013,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.108552,
-    "longitude": -63.252252,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.938404999999996,
-    "longitude": -63.975611,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.987619,
-    "longitude": -64.096171,
-    "color": "#f2f0f7"
-},{
-    "latitude": 47.06167,
-    "longitude": -64.035891,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.546306,
-    "longitude": -64.096171,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.570859999999996,
-    "longitude": -63.91533100000001,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.302677,
-    "longitude": -62.770013,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.302677,
     "longitude": -63.131692,
-    "color": "#54278f"
+    "color": "#e31a1c"
 },{
     "latitude": 46.302677,
     "longitude": -63.613932,
-    "color": "#756bb1"
-},{
-    "latitude": 46.327115,
-    "longitude": -62.589172999999995,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.327115,
-    "longitude": -63.433092,
-    "color": "#f2f0f7"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.375777,
     "longitude": -62.227493,
-    "color": "#54278f"
-},{
-    "latitude": 46.375777,
-    "longitude": -62.70973299999999,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.375777,
-    "longitude": -63.553652,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.399998,
-    "longitude": -62.528893000000004,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.399998,
-    "longitude": -63.131692,
-    "color": "#f2f0f7"
+    "color": "#e31a1c"
 },{
     "latitude": 46.791033,
     "longitude": -64.096171,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.546306,
-    "longitude": -63.855051,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.570859999999996,
-    "longitude": -63.674212,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.011745,
-    "longitude": -62.770013,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.036046999999996,
     "longitude": -62.589172999999995,
-    "color": "#9e9ac8"
-},{
-    "latitude": 46.060127,
-    "longitude": -62.890572999999996,
-    "color": "#f2f0f7"
+    "color": "#fecc5c"
 },{
     "latitude": 46.399998,
     "longitude": -63.372811999999996,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.399998,
-    "longitude": -63.975611,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.424482,
-    "longitude": -62.348053,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.424482,
-    "longitude": -62.830293000000005,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.132899,
-    "longitude": -62.830293000000005,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.157019,
-    "longitude": -63.131692,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.181388,
     "longitude": -62.70973299999999,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.351316,
-    "longitude": -62.408333,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.351316,
     "longitude": -62.890572999999996,
-    "color": "#54278f"
+    "color": "#e31a1c"
 },{
     "latitude": 46.351316,
     "longitude": -63.252252,
-    "color": "#cbc9e2"
+    "color": "#ffffb2"
 },{
     "latitude": 46.351316,
     "longitude": -63.734492,
-    "color": "#9e9ac8"
+    "color": "#fecc5c"
 },{
     "latitude": 46.497493,
     "longitude": -63.372811999999996,
-    "color": "#54278f"
+    "color": "#e31a1c"
 },{
     "latitude": 46.497493,
     "longitude": -63.613932,
-    "color": "#cbc9e2"
-},{
-    "latitude": 45.963405,
-    "longitude": -62.649453,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 45.987685,
     "longitude": -62.468613,
-    "color": "#cbc9e2"
-},{
-    "latitude": 46.229921000000004,
-    "longitude": -62.830293000000005,
-    "color": "#f2f0f7"
+    "color": "#ffffb2"
 },{
     "latitude": 46.229921000000004,
     "longitude": -63.071412,
-    "color": "#54278f"
+    "color": "#e31a1c"
 },{
     "latitude": 46.229921000000004,
     "longitude": -63.674212,
-    "color": "#54278f"
+    "color": "#e31a1c"
 },{
     "latitude": 46.254081,
     "longitude": -62.649453,
-    "color": "#cbc9e2"
+    "color": "#ffffb2"
 },{
     "latitude": 46.254081,
     "longitude": -63.493371999999994,
-    "color": "#756bb1"
-},{
-    "latitude": 46.61974,
-    "longitude": -63.794771999999995,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.61974,
-    "longitude": -64.397571,
-    "color": "#f2f0f7"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.424482,
     "longitude": -63.674212,
-    "color": "#54278f"
-},{
-    "latitude": 46.448724,
-    "longitude": -62.167214,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.570859999999996,
-    "longitude": -64.156451,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.595163,
-    "longitude": -63.975611,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.448724,
-    "longitude": -62.649453,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.448724,
-    "longitude": -63.252252,
-    "color": "#f2f0f7"
+    "color": "#e31a1c"
 },{
     "latitude": 46.448724,
     "longitude": -63.493371999999994,
-    "color": "#9e9ac8"
+    "color": "#fecc5c"
 },{
     "latitude": 46.448724,
     "longitude": -64.096171,
-    "color": "#54278f"
-},{
-    "latitude": 46.522023,
-    "longitude": -64.035891,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.546306,
-    "longitude": -63.493371999999994,
-    "color": "#f2f0f7"
+    "color": "#e31a1c"
 },{
     "latitude": 46.693009,
     "longitude": -64.33729100000001,
-    "color": "#9e9ac8"
-},{
-    "latitude": 46.717633,
-    "longitude": -64.035891,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.840112,
-    "longitude": -64.21673100000001,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.889236,
-    "longitude": -64.096171,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.963148,
-    "longitude": -64.035891,
-    "color": "#f2f0f7"
-},{
-    "latitude": 47.036879,
-    "longitude": -63.975611,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.181388,
-    "longitude": -62.950853,
-    "color": "#f2f0f7"
+    "color": "#fecc5c"
 },{
     "latitude": 46.205528,
     "longitude": -62.528893000000004,
-    "color": "#756bb1"
-},{
-    "latitude": 46.205528,
-    "longitude": -63.372811999999996,
-    "color": "#f2f0f7"
+    "color": "#fd8d3c"
 },{
     "latitude": 46.084452,
     "longitude": -62.468613,
-    "color": "#9e9ac8"
-},{
-    "latitude": 46.084452,
-    "longitude": -62.70973299999999,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.132899,
-    "longitude": -62.589172999999995,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.644064,
-    "longitude": -64.096171,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.668664,
-    "longitude": -63.91533100000001,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.766647,
-    "longitude": -64.277011,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.473231,
-    "longitude": -62.468613,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.473231,
-    "longitude": -63.91533100000001,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.497493,
-    "longitude": -62.287773,
-    "color": "#f2f0f7"
-},{
-    "latitude": 46.278496000000004,
-    "longitude": -62.468613,
-    "color": "#f2f0f7"
+    "color": "#fecc5c"
 },{
     "latitude": 46.278496000000004,
     "longitude": -62.950853,
-    "color": "#756bb1"
-},{
-    "latitude": 46.278496000000004,
-    "longitude": -63.312532,
-    "color": "#f2f0f7"
+    "color": "#fd8d3c"
 }]
