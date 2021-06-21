@@ -532,13 +532,23 @@
 
   var marker = imageSeriesTemplate.createChild(am4core.Sprite);
   marker.path = targetSVG;
-  marker.scale = 0.35;
+  //marker.scale = 0.35;
   marker.stroke = am4core.color("#FFFFFF");
   marker.strokeWidth = 10;
   marker.fontSize = 20;
   marker.horizontalCenter = "middle";
   marker.verticalCenter = "middle";
   marker.tooltipText = "{title}\n{pop}";
+  var width = $(document).width();
+  if (width < 800 & width > 600) {
+     marker.scale = 0.33;
+  }
+  else if (width <= 600) {
+     marker.scale = 0.28;
+  }
+  else {
+    marker.scale = 0.35;
+  }
 
   var labelTemplate = imageSeries.mapImages.template.createChild(am4core.Label);
   labelTemplate.horizontalCenter = "middle";
