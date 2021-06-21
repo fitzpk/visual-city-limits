@@ -264,7 +264,7 @@
   map_chart.chartContainer.zoomable = true;
   //map_chart.maxZoomLevel = 1;
 
-  var hex = $.ajax({type: "GET", url: "https://raw.githubusercontent.com/fitzpk/visual-city-limits/main/javascript/hex-map/json/hex_data_points_NB.json", async: false}).responseText;
+  var hex = $.ajax({type: "GET", url: "https://raw.githubusercontent.com/fitzpk/visual-city-limits/main/javascript/hex-map/broadband-access/json/hex_data_points_NB.json", async: false}).responseText;
   var hexData = JSON.parse(hex);
 
   var imageSeries = map_chart.series.push(new am4maps.MapImageSeries());
@@ -298,7 +298,7 @@
 
     // CHANGE DATASET BASED ON CLICKED BUTTON
     var selected_prov = elem.id.replace("_btn","");
-    var link_pre = "https://raw.githubusercontent.com/fitzpk/visual-city-limits/main/javascript/hex-map/json/hex_data_points_";
+    var link_pre = "https://raw.githubusercontent.com/fitzpk/visual-city-limits/main/javascript/hex-map/broadband-access/json/hex_data_points_";
     var link = link_pre.concat(selected_prov);
     var link = link.concat(".json");
     var hex = $.ajax({type: "GET", url: link, async: false}).responseText;
