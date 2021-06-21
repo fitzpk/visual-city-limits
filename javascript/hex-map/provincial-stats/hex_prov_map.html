@@ -540,16 +540,6 @@
   marker.horizontalCenter = "middle";
   marker.verticalCenter = "middle";
   marker.tooltipText = "{title}\n{pop}";
-  var width = $(document).width();
-  if (width < 800 & width > 600) {
-     marker.scale = 0.33;
-  }
-  else if (width <= 600) {
-     marker.scale = 0.25;
-  }
-  else {
-    marker.scale = 0.35;
-  }
 
   var labelTemplate = imageSeries.mapImages.template.createChild(am4core.Label);
   labelTemplate.horizontalCenter = "middle";
@@ -621,6 +611,19 @@
     imageSeries.mapImages.template.propertyFields.fill = new_val;
     marker.tooltipText = "{title}\n{"+new_val.replace("_c","")+"}";
     imageSeries.invalidateData();
+  }
+  
+  var width = $(document).width();
+  if (width < 800 & width > 600) {
+     marker.scale = 0.33;
+  }
+  else if (width <= 600) {
+     marker.scale = 0.24;
+     labelBullet.label.text = "";
+
+  }
+  else if (width >= 800) {
+    marker.scale = 0.35;
   }
 
 </script>
