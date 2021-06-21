@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Golf Courses of Canada</title>
+</head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    background-color: #262626;
+  }
+
+  #title {
+    width: 100%;
+    text-align: left;
+    font-size: 30px;
+    font-weight: bold;
+    padding:20px;
+    padding-top:10px;
+    color: rgba(236,236,236,1);
+    background-color: #242a30;
+    font-family:'Oswald', sans-serif;
+    text-transform: uppercase;
+  }
+  #filterIMG {
+    position:absolute;
+    margin-top: 10px;
+    margin-left:10px;
+  }
+
+  #chartdiv{
+    position: relative;
+    margin: 0 auto;
+    height: 80vh;
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .flexouter {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+  .flexcontainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    position:relative;
+    /*
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);*/
+  }
+  .chart {
+    flex: 1 1 300px;
+    font-family:'Oswald', sans-serif;
+  }
+
+  hr {
+    width: 50%;
+  }
+
+
+
+
+
+  /* ~~~~~~~  COLLAPSIBLE CSS SETTINGS ~~~~~~~~ */
+  .collapsible, #flex-collapse{
+    margin: 0 auto;
+    font-family:'Oswald', sans-serif;
+  		background-color: #3e3d48;
+  		color: white;
+  		cursor: pointer;
+  		padding: 10px;
+  		width: 95%;
+  		border: none;
+  		text-align: left;
+  		outline: none;
+  		font-size: 15px;
+  		font-weight: bold;
+  		border-radius: 6px;
+  		margin-top: 10px;
+  }
+  #flex-collapse ul {
+     font-weight: normal;
+  }
+
+  .collapsible:after {
+  		color: white;
+  		content: '\002B';
+  		float: right;
+  }
+
+  .active2:after {
+  		color: white;
+  		content: "\2212";
+  }
+
+  .content {
+  		width: auto;
+  		padding: 0 18px;
+  		max-height: 0;
+  		overflow: hidden;
+  		transition: 0.2s ease-out;
+  		box-sizing: border-box;
+      /*border: 1px solid #6f1c46;
+      background-color: #f0f0f0;*/
+      border-radius: 6px;
+      margin-top:-20px;
+  		/*box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;*/
+  }
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+  /* ~~~~~~~  PROVINCE BUTTONS ~~~~~~~~ */
+
+  .prov_btn {
+    position:relative;
+    height: 40px;
+    background-color: rgba(255,226,130,0.2);
+    color: #ffffff;
+    font-size: 12px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    cursor: pointer;
+    width:100%;
+    min-width: 60px;
+    max-width: 60px;
+    border-radius: 4px;
+    margin: 5px;
+    border: 0.8px solid #ffffff;
+  }
+  .active {
+    background-color: rgba(255,226,130,1);
+    border: 0.8px solid #ffffff;
+    color: #262626;
+    box-shadow: 0px 3px 5px 0.5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 3px 5px 0.5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 5px 0.5px rgba(0,0,0,0.75);
+  }
+
+    /* ~~~~~~~  SMALL SCREEN SETTINGS ~~~~~~~~ */
+    @media only screen and (max-width: 760px) {
+      .flexouter {
+        flex-wrap: wrap;
+        width: 95vw;
+      }
+      #chartdiv {
+        width: 90vw;
+        margin-top: -150px;
+      }
+
+    }
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+</style>
+
+<body>
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+<script src="https://www.amcharts.com/lib/4/maps.js"></script>
+<script src="https://www.amcharts.com/lib/4/geodata/canadaLow.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery.appendgrid@2/dist/AppendGrid.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<script>
+  function collapsible(elem){
+   var collaps = document.getElementsByClassName("content");
+   selectedcollap = elem.id;
+   elem.classList.toggle("active2");
+   if (collaps[selectedcollap].style.maxHeight) {
+     collaps[selectedcollap].style.maxHeight = null;
+   }
+   else {
+     collaps[selectedcollap].style.maxHeight = collaps[selectedcollap].scrollHeight + "px";
+   }
+  }
+</script>
+
+<div id="title">
+  <span style="">Broadband Access in Canada </span><img id="filterIMG" src="https://dl.dropbox.com/s/kgf8xp2mtf1lczd/wifi-router.png?dl=0" width="30" height="30">
+</div>
+
+<div class="flexouter">
+  <div class="flexcontainer-buttons" style="padding:10px;">
+    <button id="allprovs_btn" class="prov_btn" onmouseover="" onclick="highlightButton(this);">All</button>
+    <button id="AB_btn" class="prov_btn" onmouseover="" onclick="highlightButton(this);">AB</button>
+    <button id="BC_btn" class="prov_btn" onmouseover="" onclick="highlightButton(this);">BC</button>
+    <button id="MB_btn" class="prov_btn" onmouseover="" onclick="highlightButton(this);">MB</button>
+    <button id="NB_btn" class="prov_btn active" onmouseover="" onclick="highlightButton(this);">NB</button>
+    <button id="NL_btn" class="prov_btn" onmouseover="" onclick="highlightButton(this);">NL</button>
+    <button id="NS_btn" class="prov_btn" onmouseover="" onclick="highlightButton(this);">NS</button>
+    <button id="NT_btn" class="prov_btn" onmouseover="" onclick="highlightButton(this);">NT</button>
+    <button id="NU_btn" class="prov_btn" onmouseover="" onclick="highlightButton(this);">NU</button>
+    <button id="ON_btn" class="prov_btn" onmouseover="" onclick="highlightButton(this);">ON</button>
+    <button id="PE_btn" class="prov_btn" onmouseover="" onclick="highlightButton(this);">PE</button>
+    <button id="QC_btn" class="prov_btn" onmouseover="" onclick="highlightButton(this);">QC</button>
+    <button id="SK_btn" class="prov_btn" onmouseover="" onclick="highlightButton(this);">SK</button>
+    <button id="YT_btn" class="prov_btn" onmouseover="" onclick="highlightButton(this);">YT</button>
+  </div>
+</div>
+
+<div class="flexouter">
+  <div class="flexcontainer" style="padding:10px;">
+    <div id="chartdiv" class="chart" style=""></div>
+  </div>
+</div>
+
+<script>
+
+
+  // ****** MAP SETTINGS ******
+
+  // Create map instance
+  var map_chart = am4core.create("chartdiv", am4maps.MapChart);
+  map_chart.geodata = am4geodata_canadaLow;
+  // Make map load polygon (like country names) data from GeoJSON
+
+  // Set projection to conical equal area
+  map_chart.projection.d3Projection = am4maps.d3geo.geoConicEqualArea();
+  map_chart.deltaLongitude = 100;
+
+  // Create map polygon series
+  var polygonSeries = map_chart.series.push(new am4maps.MapPolygonSeries());
+  polygonSeries.useGeodata = true;
+  //polygonSeries.data = mapData;
+
+  // Configure series
+  var polygonTemplate = polygonSeries.mapPolygons.template;
+  polygonTemplate.fill = am4core.color("#d7d7d7");
+  polygonTemplate.fillOpacity = 0.2;
+  //polygonTemplate.tooltipText = "{province}"+"\n"+"{rating}"+"\n"+"{slope}"+"\n"+"{population}";
+
+  // Create hover state and set alternative fill color
+  var hs = polygonTemplate.states.create("hover");
+  hs.properties.fill = am4core.color("#ffffff");
+
+  // Add zoom buttons - Commented out for now because we don't have any data below provinces
+  map_chart.zoomControl = new am4maps.ZoomControl();
+  map_chart.zoomControl.layout = "horizontal";
+  map_chart.zoomControl.valign = "bottom";
+  map_chart.zoomControl.align = "left";
+  map_chart.zoomControl.marginBottom = "20";
+  map_chart.zoomControl.plusButton.paddingLeft = "11.5";
+  map_chart.zoomControl.minusButton.marginRight = 5;
+  map_chart.zoomControl.minusButton.width = 30;
+  map_chart.zoomControl.plusButton.width = 30;
+  map_chart.zoomControl.fill = "#dbdbdb";
+
+  // Disable drag, wheel, and zoom functionality
+  map_chart.seriesContainer.draggable = true;
+  map_chart.chartContainer.wheelable = false;
+  map_chart.chartContainer.zoomable = true;
+  //map_chart.maxZoomLevel = 1;
+
+  var hex = $.ajax({type: "GET", url: "https://raw.githubusercontent.com/fitzpk/visual-city-limits/main/javascript/hex-map/json/hex_data_points_NB.json", async: false}).responseText;
+  var hexData = JSON.parse(hex);
+
+  var imageSeries = map_chart.series.push(new am4maps.MapImageSeries());
+  imageSeries.mapImages.template.propertyFields.longitude = "longitude";
+  imageSeries.mapImages.template.propertyFields.latitude = "latitude";
+  imageSeries.mapImages.template.propertyFields.fill = "color";
+  var imageSeriesTemplate = imageSeries.mapImages.template;
+  targetSVG = "M4.330127018922193 0L8.660254037844386 2.5L8.660254037844386 7.5L4.330127018922193 10L0 7.5L0 2.5Z";
+  var marker = imageSeriesTemplate.createChild(am4core.Sprite);
+  marker.path = targetSVG;
+  marker.scale = 0.08;
+  //marker.fill = am4core.color("#FFD966");
+  marker.stroke = am4core.color("#FFFFFF");
+  marker.horizontalCenter = "middle";
+  marker.verticalCenter = "middle";
+  imageSeries.data = hexData;
+
+
+  var hs_poly = polygonSeries.mapPolygons.template.states.create("hover_poly");
+  hs_poly.properties.fill = am4core.color("#ffffff");
+
+  function highlightButton(elem) {
+    // CHANGE BUTTON CLASS
+    var x = document.getElementsByClassName("prov_btn");
+    // Reset style of all option boxes
+    for (var i = 0; i < x.length; i++) {
+       x.item(i).className = 'prov_btn';
+    }
+    // Apply active style to clicked element
+    elem.className += ' active';
+
+    // CHANGE DATASET BASED ON CLICKED BUTTON
+    var selected_prov = elem.id.replace("_btn","");
+    var link_pre = "https://raw.githubusercontent.com/fitzpk/visual-city-limits/main/javascript/hex-map/json/hex_data_points_";
+    var link = link_pre.concat(selected_prov);
+    var link = link.concat(".json");
+    var hex = $.ajax({type: "GET", url: link, async: false}).responseText;
+    var hexData = JSON.parse(hex);
+    imageSeries.data = hexData;
+    imageSeries.invalidateData();
+  }
+
+
+</script>
+
+
+
+</body>
+</html>

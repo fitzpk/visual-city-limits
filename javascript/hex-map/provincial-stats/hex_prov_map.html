@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Provincial Statistics - Canada</title>
+</head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    background-color: #262626;
+  }
+
+  #title {
+    width: 100%;
+    text-align: left;
+    font-size: 30px;
+    font-weight: bold;
+    margin: -5px;
+    padding:20px;
+    padding-top:10px;
+    color: rgba(236,236,236,1);
+    background-color: #242a30;
+    font-family:'Oswald', sans-serif;
+    text-transform: uppercase;
+  }
+
+  #chartdiv{
+    position: relative;
+    margin: 0 auto;
+    height: 60vh;
+    flex: 1 1 auto;
+    width: 80%;
+  }
+  #chartdiv2{
+    position: relative;
+    margin: 0 auto;
+    height: 40vh;
+    flex: 1 1 auto;
+    width: 80%;
+    margin-top: -80px;
+  }
+
+  /* ---------------------- */
+  .flexouter {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+  .flexcontainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    position:relative;
+    /*
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);*/
+  }
+  .chart {
+    flex: 1 1 300px;
+    font-family:'Oswald', sans-serif;
+  }
+
+  .active{
+    background-color: rgba(142,151,157,0.4);
+    border: 0.8px solid #ffffff;
+    webkit-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.12)!important;
+    -moz-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.12)!important;
+    box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.12)!important;
+  }
+  .activeClear {
+    border: 0px solid #ffffff;
+  }
+  hr {
+    width: 50%;
+  }
+
+
+
+
+
+  /* ~~~~~~~  COLLAPSIBLE CSS SETTINGS ~~~~~~~~ */
+  .collapsible, #flex-collapse{
+    margin: 0 auto;
+    font-family:'Oswald', sans-serif;
+  		background-color: #3e3d48;
+  		color: white;
+  		cursor: pointer;
+  		padding: 10px;
+  		width: 95%;
+  		border: none;
+  		text-align: left;
+  		outline: none;
+  		font-size: 15px;
+  		font-weight: bold;
+  		border-radius: 6px;
+  		margin-top: 10px;
+  }
+  #flex-collapse ul {
+     font-weight: normal;
+  }
+
+  .collapsible:after {
+  		color: white;
+  		content: '\002B';
+  		float: right;
+  }
+
+  .active2:after {
+  		color: white;
+  		content: "\2212";
+  }
+
+  .content {
+  		width: auto;
+  		padding: 0 18px;
+  		max-height: 0;
+  		overflow: hidden;
+  		transition: 0.2s ease-out;
+  		box-sizing: border-box;
+      /*border: 1px solid #6f1c46;
+      background-color: #f0f0f0;*/
+      border-radius: 6px;
+      margin-top:-20px;
+  		/*box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;*/
+  }
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+  /* ~~~~~~~  FIXED SUBJECT FILTER DROPDOWN ~~~~~~~~ */
+  #metric_txt {
+    color: rgba(236,236,236,1);
+    font-family:'Oswald',sans-serif;
+    margin-left: 15px;
+  }
+  #metric_txt:after {
+    content: ' \2193';
+  }
+  .metric_filter {
+    z-index: 3000;
+    webkit-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.12)!important;
+    -moz-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.12)!important;
+    box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.12)!important;
+    position: absolute;
+    margin: 15px;
+    top:30px;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 4px;
+    text-align:center;
+  }
+
+  .dropbtn {
+    position:relative;
+    height: 50px;
+    background-color: rgba(159,211,199,1);
+    color: #262626;
+    font-size: 12px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    cursor: pointer;
+    width:100%;
+    min-width: 80px;
+    max-width: 80px;
+    border-radius: 4px;
+    box-shadow: 0px 3px 5px 0.5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 3px 5px 0.5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 5px 0.5px rgba(0,0,0,0.75);
+  }
+
+  .dropdown {
+    position: relative;
+    width:100%;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(159,211,199,0.7);
+    min-width: 100%;
+    max-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: -1;
+    font-size: 10px;
+    margin-top:5px;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+    border:1px solid black;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1
+  }
+
+  .metric_filter:hover .dropdown-content {
+    display: block;
+  }
+
+  /*.dropdown:hover .dropbtn {
+    background-color: #007096;
+  }*/
+
+
+
+    /* ~~~~~~~  SMALL SCREEN SETTINGS ~~~~~~~~ */
+    @media only screen and (max-width: 760px) {
+      .flexouter {
+        flex-wrap: wrap;
+        width: 95vw;
+      }
+      #chartdiv, #chartdiv2 {
+        width: 90vw;
+      }
+
+    }
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+</style>
+
+<body>
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+<script src="https://www.amcharts.com/lib/4/maps.js"></script>
+<script src="https://www.amcharts.com/lib/4/geodata/canadaLow.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery.appendgrid@2/dist/AppendGrid.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<script>
+  // Highlights selected ranking button
+  function highlightVal(elem) {
+    var x = document.getElementsByClassName("valuebox");
+    // Reset style of all option boxes
+    for (var i = 0; i < x.length; i++) {
+       x.item(i).className = 'valuebox';
+    }
+    // Apply active style to clicked element
+    elem.className += ' active';
+  }
+  function highlightSub(elem) {
+    var x = document.getElementsByClassName("subDrop");
+    // Reset style of all option boxes
+    for (var i = 0; i < x.length; i++) {
+       x.item(i).className = 'subDrop';
+    }
+    // Apply active style to clicked element
+    elem.className += ' activeClear';
+    document.getElementById('cont').style.display = "none";
+  }
+  function collapsible(elem){
+   var collaps = document.getElementsByClassName("content");
+   selectedcollap = elem.id;
+   elem.classList.toggle("active2");
+   if (collaps[selectedcollap].style.maxHeight) {
+     collaps[selectedcollap].style.maxHeight = null;
+   }
+   else {
+     collaps[selectedcollap].style.maxHeight = collaps[selectedcollap].scrollHeight + "px";
+   }
+  }
+
+  // Changes text shown in the subject filter
+  function changeText(elem){
+    var t = elem.id;
+    //var lower_t = t.toLowerCase();
+    document.getElementById("fixedBTN").innerHTML = t;
+    //window.alert(elem.title);
+  }
+
+  function roundCorners() {
+    var x = document.getElementsByClassName("subDrop").children[1];
+    //console.log(x);
+  }
+
+  function displayDrops(elem) {
+    display = document.getElementById('cont').style.display;
+    document.getElementById('cont').style.display = "block";
+    //elem.click();
+  }
+
+  function hideClick(elem) {
+    display = document.getElementById('cont').style.display;
+    document.getElementById('cont').style.display = "block";
+    if (display == "block"){
+      document.getElementById('cont').style.display = "none";
+    }
+  }
+
+  //************************************************
+</script>
+
+<div id="title">
+  <span style="">Provincial Statistics - 2021 </span>
+</div>
+
+<div class="flexouter">
+  <div class="flexcontainer" style="padding:10px;">
+    <span id="metric_txt">Metric</span>
+    <div class="metric_filter">
+      <div class="dropdown">
+        <button id="fixedBTN" class="dropbtn" onmouseover="displayDrops(this);" onclick="hideClick();">Population</button>
+        <div class="dropdown-content" id="cont">
+          <a href="javascript:void(0)"  class="subDrop" id="Population" title="pop_c" onclick="highlightSub(this);changeText(this);selectValue(this.title);">Population</a>
+          <a href="javascript:void(0)"  class="subDrop" id="Unemployment" title="unemp_rate_c" onclick="highlightSub(this);changeText(this);selectValue(this.title);">Unemployment</a>
+          <a href="javascript:void(0)"  class="subDrop" id="Net Prov. Migration" title="net_intmig_c" onclick="highlightSub(this);changeText(this);selectValue(this.title);">Net Prov. Migration</a>
+        </div>
+      </div>
+    </div>
+    <div id="chartdiv" class="chart" style=""></div>
+    <div id="chartdiv2" class="chart" style=""></div>
+  </div>
+</div>
+
+<div class="flexcontainer" id="flex-collapse" style="height:auto;">
+  <button class="collapsible" onclick="collapsible(this)" id="0" style="border:none;margin-bottom:30px;">Notes&#160;</button>
+  <div class="content" style="height:auto;">
+    <ul style="font-size:11px;margin-left:-15px;padding-bottom:2px;">
+      <li>Population data sourced from: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000901</li>
+      <li>Unemployment rate data is displayed as percentage and is sourced from: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410028703</li>
+      <li>Net Inter-provincial Migration data sourced from: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710002201</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+
+
+  // ****** MAP SETTINGS ******
+  targetSVG = "M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z";
+  var data = [{
+    "title": "Yukon Territories",
+    "title_short": "YT",
+    "svgPath": targetSVG,
+    "latitude": 59.85,
+    "longitude": -128.5,
+    "pop": 42596,
+    "pop_c": "#FAE1E0",
+    "unemp_rate": null,
+    "unemp_rate_c": "#D2DFE1",
+    "net_intmig": 219,
+    "net_intmig_c": "#FCFAFC",
+  },{
+    "title": "Northwest Territories",
+    "title_short": "NT",
+    "svgPath": targetSVG,
+    "latitude": 60.9,
+    "longitude": -115.7,
+    "pop": 44991,
+    "pop_c": "#FAE1E0",
+    "unemp_rate": null,
+    "unemp_rate_c": "#D2DFE1",
+    "net_intmig": -309,
+    "net_intmig_c": "#F4F7FC",
+  },{
+    "title": "Nunavut",
+    "title_short": "NU",
+    "svgPath": targetSVG,
+    "latitude": 61.35,
+    "longitude": -102.8,
+    "pop": 39536,
+    "pop_c": "#FAE1E0",
+    "unemp_rate": null,
+    "unemp_rate_c": "#D2DFE1",
+    "net_intmig": 77,
+    "net_intmig_c": "#FCFCFF",
+  },{
+    "title": "British Columbia",
+    "title_short": "BC",
+    "svgPath": targetSVG,
+    "latitude": 54.0,
+    "longitude": -132.0,
+    "pop": 5174724,
+    "pop_c": "#E8A6AA",
+    "unemp_rate": 7.0,
+    "unemp_rate_c": "#F7D4D2",
+    "net_intmig": 15708,
+    "net_intmig_c": "#E6716F",
+  },{
+    "title": "Alberta",
+    "title_short": "AB",
+    "svgPath": targetSVG,
+    "latitude": 55.2,
+    "longitude": -120.4,
+    "pop": 4444277,
+    "pop_c": "#F2B5B7",
+    "unemp_rate": 8.7,
+    "unemp_rate_c": "#F2AFB2",
+    "net_intmig": 2183,
+    "net_intmig_c": "#F5D6D9",
+  },{
+    "title": "Saskatchewan",
+    "title_short": "SK",
+    "svgPath": targetSVG,
+    "latitude": 55.85,
+    "longitude": -108.526771,
+    "pop": 1179906,
+    "pop_c": "#E7C7C8",
+    "unemp_rate": 6.3,
+    "unemp_rate_c": "#FAE1E2",
+    "net_intmig": -11247,
+    "net_intmig_c": "#6471BA",
+  },{
+    "title": "Manitoba",
+    "title_short": "MB",
+    "svgPath": targetSVG,
+    "latitude": 55.995196,
+    "longitude": -96.526771,
+    "pop": 1382904,
+    "pop_c": "#E7C7C8",
+    "unemp_rate": 7.2,
+    "unemp_rate_c": "#F7CECF",
+    "net_intmig": -8689,
+    "net_intmig_c": "#6589C1",
+  }, {
+    "title": "Ontario",
+    "title_short": "ON",
+    "svgPath": targetSVG,
+    "latitude": 50.8,
+    "longitude": -91.2,
+    "pop": 14789778,
+    "pop_c": "#E85058",
+    "unemp_rate": 9.3,
+    "unemp_rate_c": "#F0A1A5",
+    "net_intmig": 363,
+    "net_intmig_c": "#FBF7F9",
+  }, {
+    "title": "Quebec",
+    "title_short": "QC",
+    "svgPath": targetSVG,
+    "latitude": 50.15,
+    "longitude": -80.2,
+    "pop": 8585523,
+    "pop_c": "#ED8A90",
+    "unemp_rate": 6.6,
+    "unemp_rate_c": "#FADCDB",
+    "net_intmig": -1238,
+    "net_intmig_c": "#E2E9F4",
+  }, {
+    "title": "Newfoundland & Labrador",
+    "title_short": "NL",
+    "svgPath": targetSVG,
+    "latitude": 54.5,
+    "longitude": -72.9,
+    "pop": 520286,
+    "pop_c": "#F9DDDD",
+    "unemp_rate": 13.4,
+    "unemp_rate_c": "#E74F58",
+    "net_intmig": -1469,
+    "net_intmig_c": "#DDE5F3",
+  },{
+    "title": "New Brunswick",
+    "title_short": "NB",
+    "svgPath": targetSVG,
+    "latitude": 44.8,
+    "longitude": -76.3,
+    "pop": 783721,
+    "pop_c": "#F7D9D8",
+    "unemp_rate": 9.0,
+    "unemp_rate_c": "#F2A8AB",
+    "net_intmig": 963,
+    "net_intmig_c": "#F9EDEF",
+  },{
+    "title": "Prince Edward Island",
+    "title_short": "PE",
+    "svgPath": targetSVG,
+    "latitude": 43.55,
+    "longitude": -66.4,
+    "pop": 160536,
+    "pop_c": "#FAE1E0",
+    "unemp_rate": 9.6,
+    "unemp_rate_c": "#F09BA0",
+    "net_intmig": -462,
+    "net_intmig_c": "#F1F4FB",
+  },{
+    "title": "Nova Scotia",
+    "title_short": "NS",
+    "svgPath": targetSVG,
+    "latitude": 39.6,
+    "longitude": -73.0,
+    "pop": 982326,
+    "pop_c": "#F9D8D7",
+    "unemp_rate": 9.8,
+    "unemp_rate_c": "#F0989C",
+    "net_intmig": 3901,
+    "net_intmig_c": "#F0B8B9",
+  }];
+
+  // Create map instance
+  var map_chart = am4core.create("chartdiv", am4maps.MapChart);
+  map_chart.geodata = am4geodata_canadaLow;
+  // Make map load polygon (like country names) data from GeoJSON
+
+  // Set projection to conical equal area
+  map_chart.projection.d3Projection = am4maps.d3geo.geoConicEqualArea();
+  map_chart.deltaLongitude = 100;
+
+  // Create map polygon series
+  var polygonSeries = map_chart.series.push(new am4maps.MapPolygonSeries());
+  polygonSeries.useGeodata = true;
+  polygonSeries.opacity = 0;
+
+  // Disable drag, wheel, and zoom functionality
+  map_chart.seriesContainer.draggable = false;
+  map_chart.chartContainer.wheelable = false;
+  map_chart.maxZoomLevel = 1.2;
+  map_chart.minZoomLevel = 1.2;
+
+  var imageSeries = map_chart.series.push(new am4maps.MapImageSeries());
+  imageSeries.data = data;
+  imageSeries.mapImages.template.propertyFields.longitude = "longitude";
+  imageSeries.mapImages.template.propertyFields.latitude = "latitude";
+  imageSeries.mapImages.template.propertyFields.fill = "pop_c";
+  imageSeries.dataFields.value = "pop";
+
+  var imageSeriesTemplate = imageSeries.mapImages.template;
+
+  var marker = imageSeriesTemplate.createChild(am4core.Sprite);
+  marker.path = targetSVG;
+  marker.scale = 0.35;
+  marker.stroke = am4core.color("#FFFFFF");
+  marker.strokeWidth = 10;
+  marker.fontSize = 20;
+  marker.horizontalCenter = "middle";
+  marker.verticalCenter = "middle";
+  marker.tooltipText = "{title}\n{pop}";
+
+  var labelTemplate = imageSeries.mapImages.template.createChild(am4core.Label);
+  labelTemplate.horizontalCenter = "middle";
+  labelTemplate.verticalCenter = "middle";
+  labelTemplate.fontSize = "16";
+  labelTemplate.nonScaling = true;
+  labelTemplate.interactionsEnabled = false;
+  labelTemplate.text = "{title_short}";
+
+  map_chart.homeGeoPoint = {
+    latitude: 52.533732528398296,
+    longitude: -97.55
+  };
+
+  map_chart.homeZoomLevel = 1.2;
+
+  var bar_chart = am4core.create("chartdiv2", am4charts.XYChart);
+  bar_chart.tooltip.disabled = false;
+
+  var valueAxis = bar_chart.yAxes.push(new am4charts.ValueAxis());
+  valueAxis.extraMax = 0.2;
+  valueAxis.renderer.labels.template.disabled = true;
+  valueAxis.renderer.grid.template.disabled = true;
+
+  var categoryAxis = bar_chart.xAxes.push(new am4charts.CategoryAxis());
+  categoryAxis.dataFields.category = "title_short";
+  categoryAxis.renderer.grid.template.location = 0;
+  categoryAxis.renderer.minGridDistance = 1;
+  categoryAxis.renderer.labels.template.fill = '#d3d3d3';
+  categoryAxis.renderer.grid.template.disabled = true;
+
+  var series = bar_chart.series.push(new am4charts.ColumnSeries());
+  series.dataFields.categoryX = "title_short";
+  series.dataFields.name = "title_short";
+  series.dataFields.valueY = "pop";
+  series.columns.template.tooltipText = "{pop}";
+  series.columns.template.strokeOpacity = 0;
+  series.columns.template.propertyFields.fill = "pop_c";
+  series.columns.template.column.cornerRadiusTopLeft = 3;
+  series.columns.template.column.cornerRadiusTopRight = 3;
+  series.columns.template.column.cornerRadiusBottomLeft = 3;
+  series.columns.template.column.cornerRadiusBottomRight = 3;
+
+  var labelBullet = series.bullets.push(new am4charts.LabelBullet())
+  labelBullet.label.text = "{valueY.value}";
+  labelBullet.label.fill = "#ffffff";
+  labelBullet.label.fontSize = 12;
+  labelBullet.label.truncate = true;
+  labelBullet.locationX = 0.5;
+  labelBullet.locationY = 0;
+  labelBullet.dy = -10;
+
+
+  bar_chart.data = data;
+  categoryAxis.sortBySeries = series;
+
+
+  function selectValue() {
+    //Get the clicked metric and clicked circle size value
+    var new_val = document.getElementsByClassName("subDrop activeClear")[0].title;
+
+    //Reset bar chart datafields and tooltip based on clicked values
+    series.columns.template.propertyFields.fill = new_val;
+    series.dataFields.valueY = new_val.replace("_c","");
+    series.columns.template.tooltipText = "{"+new_val.replace("_c","")+"}";
+    bar_chart.invalidateData();
+
+    //Reset hexagon datafields and tooltip based on clicked values
+    imageSeries.mapImages.template.propertyFields.fill = new_val;
+    marker.tooltipText = "{title}\n{"+new_val.replace("_c","")+"}";
+    imageSeries.invalidateData();
+  }
+
+</script>
+
+
+
+</body>
+</html>
