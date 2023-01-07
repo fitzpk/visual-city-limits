@@ -12,4 +12,4 @@ Repository of charts and visuals created with Python, Javascript, and Tableau.
 - <a href="https://fitzpk.github.io/visual-city-limits/javascript/hex-map/provincial-stats/hex_prov_map.html">Hexagon Map of Provincial Statistics (AmCharts)</a>
 
 <strong>Tableau-based</strong>
-- <a href="https://fitzpk.github.io/visual-city-limits/javascript/hex-map/provincial-stats/hex_prov_map.html">A History of NHL Trades</a>
+- <a href="https://public.tableau.com/views/NHLTrades/Dashboard?:language=en-US&:display_count=n&:origin=viz_share_link">A History of NHL Trades</a>
